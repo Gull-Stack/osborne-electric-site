@@ -1,0 +1,171 @@
+---
+title: "Contact Us | Osborne Electric & Contracting | Utah Electricians"
+description: "Contact Osborne Electric & Contracting for a free estimate. Licensed electricians serving Salt Lake City, Provo, Park City and all of Utah. Call 801-885-4521."
+---
+{% extends "base.njk" %}
+
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "mainEntity": {
+    "@type": "ElectricalContractor",
+    "name": "Osborne Electric & Contracting",
+    "telephone": "+1-801-885-4521",
+    "email": "info@osborne-electric.com"
+  }
+}
+</script>
+{% endblock %}
+
+{% block content %}
+<section class="page-header">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> <span>/</span> Contact
+    </nav>
+    <h1>Contact Us</h1>
+    <p>Get in touch for a free estimate</p>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Ready to discuss your electrical project? We're here to help. Reach out by phone, email, or fill out the form and we'll get back to you promptly.</p>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:801-885-4521">801-885-4521</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <h4>Email</h4>
+            <p><a href="mailto:info@osborne-electric.com">info@osborne-electric.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <p>Monday - Friday: 7:00 AM - 6:00 PM<br>Saturday: 8:00 AM - 2:00 PM<br>Sunday: Closed</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4>Service Areas</h4>
+            <p>Salt Lake County<br>Utah County<br>Summit County<br>+ Additional areas upon request</p>
+          </div>
+        </div>
+        
+        <div class="social-links mt-2">
+          <a href="https://www.facebook.com/profile.php?id=100078333527371" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/osborne.electric" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M16 4H8a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V8a4 4 0 0 0-4-4z"/><circle cx="12" cy="12" r="3"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h2>Request a Free Quote</h2>
+        <form action="https://formspree.io/f/your-form-id" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+          </div>
+          
+          <div class="form-group">
+            <label for="city">City/Area</label>
+            <input type="text" id="city" name="city" placeholder="e.g., Salt Lake City, Provo">
+          </div>
+          
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option value="residential">Residential Electrical</option>
+              <option value="remodel">Remodel / New Construction</option>
+              <option value="lighting">Lighting Installation</option>
+              <option value="panel">Panel Upgrade</option>
+              <option value="power">Power Restoration / Emergency</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Tell Us About Your Project *</label>
+            <textarea id="message" name="message" required placeholder="Please describe what you need help with..."></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Service Area Map</h2>
+      <p>We proudly serve Salt Lake County, Utah County, Summit County, and more</p>
+    </div>
+    
+    <div class="map-container">
+      <div class="map-placeholder">
+        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <p>Serving the Wasatch Front and Beyond</p>
+        <p><strong>Salt Lake City • Provo • Park City</strong></p>
+      </div>
+    </div>
+    
+    <div class="areas-grid mt-2">
+      <a href="/areas/salt-lake-county/" class="area-card">
+        <h3>Salt Lake County</h3>
+        <p>Salt Lake City, Sandy, Draper, Murray, West Valley & more</p>
+      </a>
+      
+      <a href="/areas/utah-county/" class="area-card">
+        <h3>Utah County</h3>
+        <p>Provo, Orem, Lehi, American Fork, Pleasant Grove & more</p>
+      </a>
+      
+      <a href="/areas/summit-county/" class="area-card">
+        <h3>Summit County</h3>
+        <p>Park City, Coalville, Kamas & surrounding areas</p>
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}
