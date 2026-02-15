@@ -1,8 +1,27 @@
 // Vercel Serverless Function - Contact Form Handler
-// Sends notification to Telegram, agent sends follow-up email
+// Sends auto-reply email to lead + notification to business + posts to SuperTool
 
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID || '-1003895576067';
+const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
+const SUPERTOOL_API = process.env.SUPERTOOL_API || 'https://backend-production-5ad2.up.railway.app';
+const SUPERTOOL_TENANT_ID = process.env.SUPERTOOL_TENANT_ID;
+
+async function sendEmail({ to, from, subject, html, replyTo }) {
+  const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${SENDGRID_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      personalizations: [{ to: [{ email: to }] }],
+      from: { email: from },
+      reply_to: replyTo ? { email: replyTo } : undefined,
+      subject,
+      content: [{ type: 'text/html', value: html }],
+    }),
+  });
+  return response.ok;
+}
 
 export default async function handler(req, res) {
   // CORS headers
@@ -25,49 +44,102 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Name and message are required' });
     }
 
-    // Format Telegram message
     const siteName = process.env.SITE_NAME || 'Osborne Electric';
     const siteEmail = process.env.SITE_EMAIL || 'info@osborne-electric.com';
-    
-    const telegramMessage = `📬 **NEW LEAD: ${siteName}**
+    const fromEmail = process.env.FROM_EMAIL || 'leads@gullstack.com';
 
-👤 **Name:** ${name}
-📞 **Phone:** ${phone || 'Not provided'}
-📧 **Email:** ${email || 'Not provided'}
-📍 **City:** ${city || 'Not specified'}
-🔧 **Service:** ${service || 'General inquiry'}
+    // 1. Send confirmation email to the lead (if they provided email)
+    if (email && SENDGRID_API_KEY) {
+      const confirmationHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background: #1a1a1a; padding: 30px; text-align: center;">
+            <h1 style="color: #F4B223; margin: 0;">Thank You, ${name}!</h1>
+          </div>
+          <div style="padding: 30px; background: #f9f9f9;">
+            <p style="font-size: 16px; color: #333;">We've received your message and will get back to you within 24 hours.</p>
+            <p style="font-size: 16px; color: #333;"><strong>Here's what you sent us:</strong></p>
+            <div style="background: white; padding: 20px; border-radius: 8px; border: 1px solid #ddd;">
+              <p style="margin: 5px 0;"><strong>Service:</strong> ${service || 'General inquiry'}</p>
+              <p style="margin: 5px 0;"><strong>Location:</strong> ${city || 'Not specified'}</p>
+              <p style="margin: 5px 0;"><strong>Message:</strong> ${message}</p>
+            </div>
+            <p style="font-size: 16px; color: #333; margin-top: 20px;">Need immediate assistance? Call us at <strong>(801) 885-4521</strong></p>
+          </div>
+          <div style="background: #1a1a1a; padding: 20px; text-align: center;">
+            <p style="color: #888; margin: 0; font-size: 14px;">${siteName} — Licensed Master Electricians Serving Utah</p>
+          </div>
+        </div>
+      `;
 
-💬 **Message:**
-${message}
-
----
-_Reply to send follow-up email to ${siteEmail}_`;
-
-    // Send to Telegram
-    const telegramResponse = await fetch(
-      `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: TELEGRAM_CHAT_ID,
-          text: telegramMessage,
-          parse_mode: 'Markdown',
-        }),
-      }
-    );
-
-    if (!telegramResponse.ok) {
-      const error = await telegramResponse.text();
-      console.error('Telegram error:', error);
-      // Still return success to user - we'll handle notification failures separately
+      await sendEmail({
+        to: email,
+        from: fromEmail,
+        subject: `Thanks for contacting ${siteName}!`,
+        html: confirmationHtml,
+      });
     }
 
-    // Return success page or JSON based on Accept header
+    // 2. Send notification email to business
+    if (SENDGRID_API_KEY) {
+      const notificationHtml = `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <div style="background: #F4B223; padding: 20px; text-align: center;">
+            <h1 style="color: #1a1a1a; margin: 0;">🔔 New Lead!</h1>
+          </div>
+          <div style="padding: 30px; background: #f9f9f9;">
+            <table style="width: 100%; border-collapse: collapse;">
+              <tr><td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Name:</strong></td><td style="padding: 10px; border-bottom: 1px solid #ddd;">${name}</td></tr>
+              <tr><td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Phone:</strong></td><td style="padding: 10px; border-bottom: 1px solid #ddd;">${phone || 'Not provided'}</td></tr>
+              <tr><td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Email:</strong></td><td style="padding: 10px; border-bottom: 1px solid #ddd;">${email || 'Not provided'}</td></tr>
+              <tr><td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>City:</strong></td><td style="padding: 10px; border-bottom: 1px solid #ddd;">${city || 'Not specified'}</td></tr>
+              <tr><td style="padding: 10px; border-bottom: 1px solid #ddd;"><strong>Service:</strong></td><td style="padding: 10px; border-bottom: 1px solid #ddd;">${service || 'General inquiry'}</td></tr>
+            </table>
+            <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 1px solid #ddd;">
+              <strong>Message:</strong><br/>
+              <p style="margin: 10px 0 0 0;">${message}</p>
+            </div>
+          </div>
+          <div style="background: #1a1a1a; padding: 15px; text-align: center;">
+            <p style="color: #888; margin: 0; font-size: 12px;">Lead from ${siteName} website</p>
+          </div>
+        </div>
+      `;
+
+      await sendEmail({
+        to: siteEmail,
+        from: fromEmail,
+        subject: `🔔 New Lead: ${name} - ${service || 'General inquiry'}`,
+        html: notificationHtml,
+        replyTo: email || undefined,
+      });
+    }
+
+    // 3. POST to SuperTool dashboard
+    if (SUPERTOOL_TENANT_ID) {
+      try {
+        await fetch(`${SUPERTOOL_API}/api/public/leads/${SUPERTOOL_TENANT_ID}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name,
+            email: email || null,
+            phone: phone || null,
+            city: city || null,
+            service: service || null,
+            message,
+            source: 'website',
+            metadata: { form: 'contact', site: siteName }
+          }),
+        });
+      } catch (e) {
+        console.error('SuperTool error:', e);
+      }
+    }
+
+    // Return success
     const acceptsHtml = req.headers.accept?.includes('text/html');
     
     if (acceptsHtml) {
-      // Redirect to thank you page or return HTML
       return res.status(200).send(`
         <!DOCTYPE html>
         <html>
@@ -84,7 +156,7 @@ _Reply to send follow-up email to ${siteEmail}_`;
         <body>
           <div class="container">
             <h1>✓ Message Sent!</h1>
-            <p>Thank you, ${name}! We'll be in touch shortly.</p>
+            <p>Thank you, ${name}! Check your email for confirmation.</p>
             <p><small>Redirecting to homepage...</small></p>
           </div>
         </body>
