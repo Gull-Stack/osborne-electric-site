@@ -2,17 +2,24 @@
 /* Mobile-first responsive design */
 
 :root {
-  --primary-blue: #1e3a5f;
-  --electric-blue: #0088cc;
-  --accent-blue: #00a8e8;
-  --light-blue: #e8f4fc;
+  /* Brand Colors - Black, White, Yellow, Gray */
+  --primary: #1a1a1a;
+  --primary-dark: #000000;
+  --accent: #F4B223;
+  --accent-hover: #E5A31D;
   --dark-gray: #2d3436;
   --medium-gray: #636e72;
   --light-gray: #f5f6fa;
   --white: #ffffff;
-  --warning-yellow: #f1c40f;
   --success-green: #27ae60;
   --font-main: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  
+  /* Legacy aliases for compatibility */
+  --primary-blue: #1a1a1a;
+  --electric-blue: #F4B223;
+  --accent-blue: #E5A31D;
+  --light-blue: #f5f6fa;
+  --warning-yellow: #F4B223;
 }
 
 * {
@@ -218,7 +225,7 @@ a:hover {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--electric-blue) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: var(--white);
   padding: 3rem 0;
   text-align: center;
@@ -511,7 +518,7 @@ section {
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(135deg, var(--electric-blue) 0%, var(--accent-blue) 100%);
+  background: #1a1a1a;
   color: var(--white);
   text-align: center;
   padding: 3rem 0;
@@ -655,7 +662,7 @@ section {
 
 /* Page Headers */
 .page-header {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--electric-blue) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
   color: var(--white);
   padding: 3rem 0;
   text-align: center;
