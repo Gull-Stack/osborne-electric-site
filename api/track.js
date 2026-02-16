@@ -21,23 +21,19 @@ export default async function handler(req, res) {
     const { event, phone, page, timestamp } = req.body;
     const siteName = process.env.SITE_NAME || 'Osborne Electric';
 
-    // Log to SuperTool as a lead with type 'phone_click'
+    // Log to SuperTool using formName to categorize event type
     if (SUPERTOOL_TENANT_ID) {
       await fetch(`${SUPERTOOL_API}/api/public/leads/${SUPERTOOL_TENANT_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: `Phone Click: ${phone}`,
+          firstName: 'Phone',
+          lastName: 'Click',
           phone: phone,
-          source: 'website',
-          message: `Phone number clicked on ${page}`,
-          metadata: { 
-            type: 'phone_click',
-            event,
-            page,
-            timestamp,
-            site: siteName
-          }
+          formName: 'phone_click',
+          sourceSite: siteName,
+          sourceUrl: page,
+          message: `Phone number ${phone} clicked on ${page} at ${timestamp}`,
         }),
       });
     }
