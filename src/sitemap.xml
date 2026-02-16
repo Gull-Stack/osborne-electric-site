@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://osborne-electric-site.vercel.app/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/about/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/contact/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/residential-electrical/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/remodels-new-construction/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/lighting-installation/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/panel-upgrades/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/services/power-restoration/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/salt-lake-county/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/utah-county/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/davis-county/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/tooele-county/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/summit-county/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/sandy-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/draper-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/west-valley-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/murray-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/south-jordan-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/provo-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/orem-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/lehi-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/american-fork-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/bountiful-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/layton-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://osborne-electric-site.vercel.app/areas/park-city-ut/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
