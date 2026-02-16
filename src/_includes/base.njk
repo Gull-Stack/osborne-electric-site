@@ -70,6 +70,28 @@
         this.parentElement.classList.toggle('active');
       });
     });
+    
+    // GA4 Event Tracking: Phone Clicks
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        gtag('event', 'phone_click', {
+          'event_category': 'contact',
+          'event_label': this.href.replace('tel:', ''),
+          'value': 1
+        });
+      });
+    });
+    
+    // GA4 Event Tracking: Form Submissions
+    document.querySelectorAll('form').forEach(function(form) {
+      form.addEventListener('submit', function() {
+        gtag('event', 'form_submit', {
+          'event_category': 'contact',
+          'event_label': window.location.pathname,
+          'value': 1
+        });
+      });
+    });
   </script>
 </body>
 </html>
