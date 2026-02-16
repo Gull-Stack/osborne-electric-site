@@ -74,11 +74,24 @@
     // GA4 Event Tracking: Phone Clicks
     document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
       el.addEventListener('click', function() {
+        var phoneNum = this.href.replace('tel:', '');
+        // GA4
         gtag('event', 'phone_click', {
           'event_category': 'contact',
-          'event_label': this.href.replace('tel:', ''),
+          'event_label': phoneNum,
           'value': 1
         });
+        // SuperTool
+        fetch('/api/track', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            event: 'phone_click',
+            phone: phoneNum,
+            page: window.location.pathname,
+            timestamp: new Date().toISOString()
+          })
+        }).catch(function() {});
       });
     });
     
