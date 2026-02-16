@@ -146,15 +146,30 @@ a:hover {
   fill: var(--white);
 }
 
-.logo-text h1 {
-  font-size: 1.25rem;
-  margin: 0;
-  color: var(--primary-blue);
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
 }
 
-.logo-text span {
-  font-size: 0.75rem;
+.logo-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--dark-gray);
+  letter-spacing: 0.02em;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  font-weight: 600;
   color: var(--medium-gray);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .logo-text {
+    display: none;
+  }
 }
 
 /* Navigation */
