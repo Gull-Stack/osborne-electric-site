@@ -168,7 +168,16 @@ a:hover {
 
 @media (max-width: 768px) {
   .logo-text {
-    display: none;
+    display: flex;
+  }
+  .logo-name {
+    font-size: 1.1rem;
+  }
+  .logo-tagline {
+    font-size: 0.55rem;
+  }
+  .logo-img {
+    height: 40px;
   }
 }
 
