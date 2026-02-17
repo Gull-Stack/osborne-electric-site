@@ -128,6 +128,11 @@ description: "Contact Osborne Electric & Contracting for a free estimate. Licens
             <textarea id="message" name="message" required placeholder="Please describe what you need help with..."></textarea>
           </div>
           
+          <!-- Honeypot spam protection -->
+          <div style="position: absolute; left: -9999px;" aria-hidden="true">
+            <input type="text" name="fax_number" tabindex="-1" autocomplete="off">
+          </div>
+          
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
       </div>
