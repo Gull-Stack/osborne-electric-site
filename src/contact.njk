@@ -133,8 +133,12 @@ description: "Contact Osborne Electric & Contracting for a free estimate. Licens
             <input type="text" name="fax_number" tabindex="-1" autocomplete="off">
           </div>
           
+          <!-- Timestamp token (bot detection) -->
+          <input type="hidden" name="_timestamp" id="_timestamp" value="">
+          
           <button type="submit" class="btn btn-primary">Send Message</button>
         </form>
+        <script>document.getElementById('_timestamp').value = Date.now();</script>
       </div>
     </div>
   </div>
