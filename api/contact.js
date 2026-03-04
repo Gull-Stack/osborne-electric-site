@@ -75,7 +75,7 @@ export default async function handler(req, res) {
     }
 
     const siteName = process.env.SITE_NAME || 'Osborne Electric';
-    const siteEmail = process.env.SITE_EMAIL || 'info@osborne-electric.com';
+    const siteEmail = process.env.SITE_EMAIL || 'Osborne-electric@outlook.com';
     const fromEmail = process.env.FROM_EMAIL || 'leads@gullstack.com';
 
     if (email && SENDGRID_API_KEY) {
