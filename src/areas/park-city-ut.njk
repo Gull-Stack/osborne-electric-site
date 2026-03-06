@@ -1,48 +1,233 @@
 ---
 title: "Electrician Park City Utah | Osborne Electric"
-description: "Licensed electrician in Park City, UT. Residential electrical services, panel upgrades, lighting installation & emergency repairs. Master Electricians. Call 801-885-4521."
+description: "Licensed electrician in Park City, UT. Luxury home electrical, ski home wiring, panel upgrades, remodels, and lighting installation. Master Electricians. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
 {% block schema %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "ElectricalContractor", "name": "Osborne Electric & Contracting", "telephone": "+1-801-885-4521", "areaServed": {"@type": "City", "name": "Park City", "containedInPlace": {"@type": "State", "name": "Utah"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Park City",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Summit County",
+      "containedInPlace": {"@type": "State", "name": "Utah"}
+    }
+  },
+  "address": {"@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Summit County", "item": "https://osborne-electric.com/areas/summit-county/"},
+    {"@type": "ListItem", "position": 4, "name": "Park City"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of Park City does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Park City and surrounding communities, including Old Town, Prospector, Snyderville Basin, Canyons Village, Deer Valley, Jeremy Ranch, and Kimball Junction. We also serve the broader Summit County area for residential electrical work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle electrical work for luxury homes in Park City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric specializes in residential electrical services for Park City's luxury and custom homes. We handle complex lighting designs, home automation wiring, heated driveway and snow melt circuits, hot tub and sauna wiring, and whole-home electrical systems for high-end mountain properties."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you schedule electrical work in Park City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We typically schedule routine residential electrical work in Park City within a few business days. For urgent electrical issues such as power outages or safety hazards, we offer priority scheduling. During peak seasons we recommend booking early to secure your preferred date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Osborne Electric pull permits for electrical work in Park City?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric pulls all required electrical permits through Summit County and Park City municipal offices. Park City has specific building codes and requirements, and we handle the full permitting process so homeowners do not have to navigate it themselves."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you upgrade the electrical systems in older Park City homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Many older Park City homes, especially in the Historic District and Old Town, have outdated wiring and undersized panels that cannot keep up with modern electrical demands. We provide panel upgrades, full rewiring, grounding updates, and code-compliant modernization while respecting the character of these historic properties."
+      }
+    }
+  ]
+}
 </script>
 {% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/photo-5.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Park City</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> <a href="/areas/summit-county/">Summit County</a> <span>/</span> Park City
+    </nav>
     <h1>Electrician in Park City, Utah</h1>
-    <p>Licensed Master Electricians serving Park City and Summit County</p>
+    <p>Licensed Master Electricians serving Park City's luxury homes and mountain communities.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed residential electrical services throughout Park City, Utah, and the surrounding Summit County communities. From luxury ski homes in Deer Valley to historic properties in Old Town, owner Trevor Osborne and his team handle panel upgrades, lighting design, remodel wiring, snow melt circuits, and emergency repairs. Family-owned with Master Electrician credentials and honest pricing on every project.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/main.jpg" alt="Electrician Park City Utah" loading="lazy">
+        <img src="/images/work/photo-5.jpg" alt="Residential electrical work in Park City, Utah by Osborne Electric" loading="lazy">
       </div>
       <div>
         <h2>Your Trusted Park City Electrician</h2>
-        <p>Need an electrician in Park City, Utah? Osborne Electric provides professional residential electrical services to Park City homeowners, from Old Town to the Canyons and Deer Valley areas.</p>
-        <p>Our licensed Master Electricians understand the unique electrical needs of mountain homes—from snow melt systems to backup generators.</p>
-        
-        <h3>Electrical Services in Park City:</h3>
+        <p>Park City presents unique electrical challenges that set it apart from the Wasatch Front. At nearly 7,000 feet of elevation, mountain homes face harsher weather, longer winters, and higher power demands from heating systems, snow melt circuits, and hot tubs. Osborne Electric understands these requirements and delivers expert residential electrical work tailored to the mountain environment.</p>
+        <p>Whether you own a luxury ski-in/ski-out property in Deer Valley, a recently remodeled condo in Canyons Village, or a historic miner's cottage in Old Town, we bring the same level of professionalism and attention to detail. Our licensed Master Electricians handle everything from complete <a href="/services/remodels-new-construction/">remodel wiring</a> to panel upgrades and <a href="/services/lighting-installation/">lighting installations</a> designed for mountain living.</p>
+
+        <h3>Neighborhoods We Serve in Park City:</h3>
         <ul class="value-list">
-          <li>Electrical repairs & troubleshooting</li>
-          <li>Panel upgrades & replacements</li>
-          <li>Recessed & LED lighting installation</li>
-          <li>Landscape & outdoor lighting</li>
-          <li>Hot tub & sauna wiring</li>
-          <li>Home automation wiring</li>
-          <li>Emergency electrical service</li>
+          <li>Old Town</li>
+          <li>Prospector</li>
+          <li>Snyderville Basin</li>
+          <li>Canyons Village</li>
+          <li>Deer Valley</li>
+          <li>Jeremy Ranch</li>
+          <li>Kimball Junction</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Park City Homeowners Choose Osborne Electric</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>We hold the highest level of electrical licensing in Utah. Every project is completed to code with expert craftsmanship suited to Park City's mountain building requirements.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned Business</h3>
+        <p>Owner Trevor Osborne personally oversees your project. No subcontractors, no hand-offs -- just the direct accountability of a family business that values its reputation.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>Clear, detailed quotes before work begins. No hidden fees and no surprise charges -- even on complex luxury home projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h2>Electrical Services for Park City Mountain Homes</h2>
+    <p>Park City homes have specific electrical needs driven by the mountain climate and the high standard of construction found throughout the area. Many luxury properties require extensive lighting systems, home automation, heated driveways, and dedicated circuits for hot tubs and saunas. Older homes in the Historic District often need complete electrical overhauls to bring them up to modern code while preserving their architectural character.</p>
+    <p>High-altitude conditions also affect electrical equipment. Transformers and motors can run differently at elevation, and heavy snow loads put stress on exterior wiring and service entrances. Our team accounts for these factors on every Park City project, ensuring safe and reliable electrical systems that perform through harsh mountain winters.</p>
+    <p>If you are planning a <a href="/services/remodels-new-construction/">remodel of an older Park City home</a>, electrical upgrades should be one of the first items on your list. Many homes built in the 1960s through 1980s have aluminum wiring, undersized panels, or insufficient grounding. We provide thorough assessments and bring these systems up to current code as part of the remodel process.</p>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What areas of Park City does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of Park City and surrounding communities, including Old Town, Prospector, Snyderville Basin, Canyons Village, Deer Valley, Jeremy Ranch, and Kimball Junction. We also serve the broader <a href="/areas/summit-county/">Summit County</a> area for residential electrical work.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you handle electrical work for luxury homes in Park City?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric specializes in <a href="/services/residential-electrical/">residential electrical services</a> for Park City's luxury and custom homes. We handle complex lighting designs, home automation wiring, heated driveway and snow melt circuits, hot tub and sauna wiring, and whole-home electrical systems for high-end mountain properties.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How quickly can you schedule electrical work in Park City?</summary>
+        <div class="faq-details-body">
+          <p>We typically schedule routine residential electrical work in Park City within a few business days. For urgent electrical issues such as power outages or safety hazards, we offer priority scheduling. During peak seasons we recommend booking early to secure your preferred date.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Does Osborne Electric pull permits for electrical work in Park City?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric pulls all required electrical permits through Summit County and Park City municipal offices. Park City has specific building codes and requirements, and we handle the full permitting process so homeowners do not have to navigate it themselves.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Can you upgrade the electrical systems in older Park City homes?</summary>
+        <div class="faq-details-body">
+          <p>Absolutely. Many older Park City homes, especially in the Historic District and Old Town, have outdated wiring and undersized panels that cannot keep up with modern electrical demands. We provide panel upgrades, full rewiring, grounding updates, and code-compliant modernization while respecting the character of these historic properties.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, outlets, circuits, and safety inspections.</p>
+      </a>
+      <a href="/services/remodels-new-construction/" class="internal-link-card">
+        <h4>Remodels & New Construction</h4>
+        <p>Full electrical wiring for Park City remodels and custom mountain builds.</p>
+      </a>
+      <a href="/areas/summit-county/" class="internal-link-card">
+        <h4>Summit County</h4>
+        <p>Serving Coalville, Kamas, Jeremy Ranch, and all of Summit County.</p>
+      </a>
+      <a href="/services/lighting-installation/" class="internal-link-card">
+        <h4>Lighting Installation</h4>
+        <p>Recessed lighting, LED conversions, and custom fixture installations.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -50,11 +235,15 @@ description: "Licensed electrician in Park City, UT. Residential electrical serv
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Park City?</h2>
-    <p>Contact us today for fast, reliable electrical service.</p>
+    <p>Contact us for expert residential electrical service in Park City and surrounding mountain communities.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

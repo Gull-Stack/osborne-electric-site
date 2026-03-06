@@ -1,48 +1,225 @@
 ---
 title: "Electrician Bountiful Utah | Osborne Electric"
-description: "Licensed electrician in Bountiful, UT. Residential electrical services, panel upgrades, lighting installation & emergency repairs. Master Electricians. Call 801-885-4521."
+description: "Licensed electrician in Bountiful, UT. Residential electrical services, panel upgrades, lighting installation, and emergency repairs. Master Electricians. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
 {% block schema %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "ElectricalContractor", "name": "Osborne Electric & Contracting", "telephone": "+1-801-885-4521", "areaServed": {"@type": "City", "name": "Bountiful", "containedInPlace": {"@type": "State", "name": "Utah"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Bountiful",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Davis County",
+      "containedInPlace": {"@type": "State", "name": "Utah"}
+    }
+  },
+  "address": {"@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Davis County", "item": "https://osborne-electric.com/areas/davis-county/"},
+    {"@type": "ListItem", "position": 4, "name": "Bountiful"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of Bountiful does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Bountiful, Utah, including South Bountiful, Val Verda, the Orchard Drive area, Bountiful Hills, and downtown Bountiful. We also serve neighboring Centerville, Woods Cross, North Salt Lake, and other Davis County communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do older Bountiful homes need electrical updates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many homes in Bountiful were built in the 1950s through 1970s and still have original 100-amp panels, outdated wiring, or ungrounded outlets. These systems were not designed for today's electrical demands. A professional inspection can determine whether your home needs a panel upgrade, rewiring, or additional circuits to stay safe and meet modern needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you schedule electrical work in Bountiful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We typically schedule routine electrical work in Bountiful within a few business days. For urgent issues like power outages, sparking outlets, or safety hazards, we offer priority scheduling to address the problem as quickly as possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your electricians licensed to work in Bountiful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Bountiful and all municipalities in Davis County. We carry full insurance and pull all required permits for every job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Osborne Electric offer free estimates in Bountiful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We provide free, no-obligation estimates for electrical work in Bountiful. We will visit your home, assess the scope of the project, and give you an honest, upfront quote before any work begins. Call 801-885-4521 or use our online contact form to schedule yours."
+      }
+    }
+  ]
+}
 </script>
 {% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-15.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Bountiful</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> <a href="/areas/davis-county/">Davis County</a> <span>/</span> Bountiful
+    </nav>
     <h1>Electrician in Bountiful, Utah</h1>
-    <p>Licensed Master Electricians serving Bountiful and South Davis County</p>
+    <p>Licensed Master Electricians serving Bountiful and South Davis County.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed master electrician services in Bountiful, Utah, serving neighborhoods from South Bountiful and Val Verda to Bountiful Hills and downtown. Services include panel upgrades, lighting installation, outlet and circuit repair, whole-home rewiring, EV charger installation, and emergency electrical repair. Family-owned with transparent pricing and free estimates.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-15.jpg" alt="Electrician Bountiful Utah" loading="lazy">
+        <img src="/images/work/project-15.jpg" alt="Residential electrical work in Bountiful, Utah by Osborne Electric" loading="lazy">
       </div>
       <div>
         <h2>Your Trusted Bountiful Electrician</h2>
-        <p>Need a reliable electrician in Bountiful, Utah? Osborne Electric provides professional residential electrical services throughout Bountiful, Centerville, Woods Cross, and North Salt Lake.</p>
-        <p>Our licensed Master Electricians bring quality workmanship and honest service to Davis County homeowners.</p>
-        
+        <p>Bountiful is one of Davis County's most established communities, with tree-lined streets and neighborhoods that range from historic homes near downtown to mid-century builds in South Bountiful and Val Verda, to newer construction in the Bountiful Hills. Many of these homes were wired decades ago with electrical systems that struggle to keep up with modern demands -- frequent breaker trips, insufficient outlets, and outdated panels are common issues we see throughout the city.</p>
+        <p>Osborne Electric provides professional residential electrical services throughout all of Bountiful. Our licensed Master Electricians bring expert craftsmanship and honest pricing to every project, whether you need a single outlet replaced or a complete electrical system overhaul.</p>
+
         <h3>Electrical Services in Bountiful:</h3>
         <ul class="value-list">
-          <li>Electrical repairs & troubleshooting</li>
-          <li>Panel upgrades & replacements</li>
-          <li>Recessed & LED lighting installation</li>
-          <li>Outlet & switch installation</li>
-          <li>Ceiling fan installation</li>
+          <li>Electrical repairs and troubleshooting</li>
+          <li><a href="/services/panel-upgrades/">Panel upgrades</a> and replacements</li>
+          <li>Recessed and LED lighting installation</li>
+          <li>Outlet and switch installation</li>
+          <li>EV charger installation</li>
           <li>Home rewiring</li>
           <li>Emergency electrical service</li>
+          <li>Remodel and new construction wiring</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Bountiful Homeowners Choose Osborne Electric</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>The highest level of electrical licensing in Utah. Every project is completed to code with expert craftsmanship.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned Business</h3>
+        <p>Owner Trevor Osborne personally oversees your project. Direct accountability and no subcontractors.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>Clear, detailed quotes before work begins. No hidden fees and no surprise charges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What areas of Bountiful does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of Bountiful, Utah, including South Bountiful, Val Verda, the Orchard Drive area, Bountiful Hills, and downtown Bountiful. We also serve neighboring Centerville, Woods Cross, North Salt Lake, and other Davis County communities.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do older Bountiful homes need electrical updates?</summary>
+        <div class="faq-details-body">
+          <p>Many homes in Bountiful were built in the 1950s through 1970s and still have original 100-amp panels, outdated wiring, or ungrounded outlets. These systems were not designed for today's electrical demands. A professional inspection can determine whether your home needs a <a href="/services/panel-upgrades/">panel upgrade</a>, rewiring, or additional circuits to stay safe and meet modern needs.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How quickly can you schedule electrical work in Bountiful?</summary>
+        <div class="faq-details-body">
+          <p>We typically schedule routine electrical work in Bountiful within a few business days. For urgent issues like power outages, sparking outlets, or safety hazards, we offer priority scheduling to address the problem as quickly as possible.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Are your electricians licensed to work in Bountiful?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Bountiful and all municipalities in Davis County. We carry full insurance and pull all required permits for every job.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Does Osborne Electric offer free estimates in Bountiful?</summary>
+        <div class="faq-details-body">
+          <p>Yes. We provide free, no-obligation estimates for electrical work in Bountiful. We will visit your home, assess the scope of the project, and give you an honest, upfront quote before any work begins. Call 801-885-4521 or use our <a href="/contact/">online contact form</a> to schedule yours.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, outlets, circuits, and safety inspections.</p>
+      </a>
+      <a href="/services/panel-upgrades/" class="internal-link-card">
+        <h4>Panel Upgrades</h4>
+        <p>Modernize your electrical panel for today's power demands.</p>
+      </a>
+      <a href="/areas/davis-county/" class="internal-link-card">
+        <h4>Davis County</h4>
+        <p>Serving Layton, Kaysville, Farmington, Centerville, and all of Davis County.</p>
+      </a>
+      <a href="/areas/layton-ut/" class="internal-link-card">
+        <h4>Layton</h4>
+        <p>Electrical services in neighboring Layton, Utah.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -50,11 +227,15 @@ description: "Licensed electrician in Bountiful, UT. Residential electrical serv
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Bountiful?</h2>
-    <p>Contact us today for fast, reliable electrical service.</p>
+    <p>Contact us for fast, reliable residential electrical service in Bountiful and surrounding areas.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

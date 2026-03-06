@@ -1,48 +1,225 @@
 ---
 title: "Electrician Lehi Utah | Osborne Electric"
-description: "Licensed electrician in Lehi, UT. Residential electrical services, panel upgrades, lighting installation & emergency repairs. Master Electricians. Call 801-885-4521."
+description: "Licensed electrician in Lehi, UT. Residential electrical services, new construction wiring, EV charger installation, and smart home wiring. Master Electricians serving Lehi. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
 {% block schema %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "ElectricalContractor", "name": "Osborne Electric & Contracting", "telephone": "+1-801-885-4521", "areaServed": {"@type": "City", "name": "Lehi", "containedInPlace": {"@type": "State", "name": "Utah"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Lehi",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Utah County",
+      "containedInPlace": {"@type": "State", "name": "Utah"}
+    }
+  },
+  "address": {"@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Utah County", "item": "https://osborne-electric.com/areas/utah-county/"},
+    {"@type": "ListItem", "position": 4, "name": "Lehi"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of Lehi does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Lehi, Utah, including Traverse Mountain, the Thanksgiving Point area, Silicon Slopes, Ivory Ridge, and original Lehi downtown. We also serve neighboring American Fork, Saratoga Springs, and other Utah County communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle electrical work for new construction homes in Lehi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Lehi is one of the fastest-growing cities in Utah, and we regularly work with homeowners in new developments throughout Traverse Mountain, Ivory Ridge, and other Lehi neighborhoods. We handle everything from additional circuit installation to upgrading builder-grade lighting and adding dedicated home office circuits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install an EV charger at my Lehi home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric installs Level 2 EV chargers in Lehi homes, including the dedicated 240-volt circuit, panel capacity assessment, and any upgrades needed to support the charger. We handle permitting through Lehi City as part of the installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your electricians licensed to work in Lehi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Lehi and all municipalities in Utah County. We carry full insurance and pull all required permits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer smart home wiring in Lehi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We install and wire smart home systems in Lehi residences, including smart switches, automated lighting controls, structured wiring for home networks, and dedicated circuits for smart home hubs and devices. Whether you are retrofitting an older home or adding smart features to a new build, we can help."
+      }
+    }
+  ]
+}
 </script>
 {% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-13.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Lehi</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> <a href="/areas/utah-county/">Utah County</a> <span>/</span> Lehi
+    </nav>
     <h1>Electrician in Lehi, Utah</h1>
-    <p>Licensed Master Electricians serving Lehi and Silicon Slopes</p>
+    <p>Licensed Master Electricians serving Lehi and the Silicon Slopes corridor.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed master electrician services in Lehi, Utah, serving neighborhoods from Traverse Mountain and Thanksgiving Point to original Lehi downtown. Services include new construction electrical, EV charger installation, smart home wiring, lighting installation, panel upgrades, and emergency repairs. Family-owned with transparent pricing and free estimates.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-13.jpg" alt="Electrician Lehi Utah" loading="lazy">
+        <img src="/images/work/project-13.jpg" alt="Residential electrical work in Lehi, Utah by Osborne Electric" loading="lazy">
       </div>
       <div>
         <h2>Your Trusted Lehi Electrician</h2>
-        <p>Need an electrician in Lehi, Utah? Osborne Electric provides professional residential electrical services throughout Lehi's fast-growing neighborhoods, from Traverse Mountain to Thanksgiving Point and beyond.</p>
-        <p>We specialize in both new construction homes and updating older properties with modern electrical systems.</p>
-        
+        <p>Lehi is one of the fastest-growing cities in Utah, with neighborhoods ranging from the original downtown with its historic homes to the modern developments of Traverse Mountain, Ivory Ridge, and the Silicon Slopes corridor near Thanksgiving Point. This rapid growth means homeowners need electricians who understand both new construction standards and the challenges of updating older properties.</p>
+        <p>Osborne Electric provides professional residential electrical services throughout all of Lehi. Whether you need smart home wiring in a new Traverse Mountain build or a panel upgrade in original Lehi downtown, our licensed Master Electricians deliver expert work with honest pricing on every project.</p>
+
         <h3>Electrical Services in Lehi:</h3>
         <ul class="value-list">
-          <li>Electrical repairs & troubleshooting</li>
-          <li>Panel upgrades & replacements</li>
-          <li>Recessed & LED lighting installation</li>
-          <li>Smart home wiring</li>
+          <li>Electrical repairs and troubleshooting</li>
+          <li>Panel upgrades and replacements</li>
+          <li><a href="/services/lighting-installation/">Recessed and LED lighting installation</a></li>
+          <li>Smart home wiring and automation</li>
           <li>EV charger installation</li>
-          <li>Home office electrical</li>
+          <li>Home office electrical circuits</li>
+          <li><a href="/services/residential-electrical/">Whole-home electrical service</a></li>
           <li>Emergency electrical service</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Lehi Homeowners Choose Osborne Electric</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>The highest level of electrical licensing in Utah. Every project is completed to code with expert craftsmanship you can trust for decades.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned Business</h3>
+        <p>Owner Trevor Osborne personally oversees your project. No subcontractors, no hand-offs -- just the direct accountability of a family business that values its reputation.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>Clear, detailed quotes before work begins. No hidden fees, no surprise charges, no pressure tactics. The price we quote is the price you pay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What areas of Lehi does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of Lehi, Utah, including Traverse Mountain, the Thanksgiving Point area, Silicon Slopes, Ivory Ridge, and original Lehi downtown. We also serve neighboring American Fork, Saratoga Springs, and other Utah County communities.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you handle electrical work for new construction homes in Lehi?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Lehi is one of the fastest-growing cities in Utah, and we regularly work with homeowners in new developments throughout Traverse Mountain, Ivory Ridge, and other Lehi neighborhoods. We handle everything from additional circuit installation to upgrading builder-grade lighting and adding dedicated home office circuits.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Can you install an EV charger at my Lehi home?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric installs Level 2 EV chargers in Lehi homes, including the dedicated 240-volt circuit, panel capacity assessment, and any upgrades needed to support the charger. We handle permitting through Lehi City as part of the installation.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Are your electricians licensed to work in Lehi?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Lehi and all municipalities in Utah County. We carry full insurance and pull all required permits.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you offer smart home wiring in Lehi?</summary>
+        <div class="faq-details-body">
+          <p>Yes. We install and wire smart home systems in Lehi residences, including smart switches, automated lighting controls, structured wiring for home networks, and dedicated circuits for smart home hubs and devices. Whether you are retrofitting an older home or adding smart features to a new build, we can help.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, outlets, circuits, and safety inspections.</p>
+      </a>
+      <a href="/services/lighting-installation/" class="internal-link-card">
+        <h4>Lighting Installation</h4>
+        <p>Recessed lighting, LED upgrades, and fixture installation.</p>
+      </a>
+      <a href="/areas/utah-county/" class="internal-link-card">
+        <h4>Utah County</h4>
+        <p>Serving American Fork, Orem, Provo, and all of Utah County.</p>
+      </a>
+      <a href="/areas/american-fork-ut/" class="internal-link-card">
+        <h4>American Fork</h4>
+        <p>Electrical services in neighboring American Fork, Utah.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -50,11 +227,15 @@ description: "Licensed electrician in Lehi, UT. Residential electrical services,
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Lehi?</h2>
-    <p>Contact us today for fast, reliable electrical service.</p>
+    <p>Contact us for fast, reliable residential electrical service in Lehi and surrounding areas.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

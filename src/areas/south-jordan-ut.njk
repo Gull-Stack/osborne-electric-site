@@ -1,48 +1,225 @@
 ---
 title: "Electrician South Jordan Utah | Osborne Electric"
-description: "Licensed electrician in South Jordan, UT. Residential electrical services, panel upgrades, lighting installation & repairs. Master Electricians. Call 801-885-4521."
+description: "Licensed electrician in South Jordan, UT. Residential electrical services, panel upgrades, lighting, and emergency repairs. Master Electricians. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
 {% block schema %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "ElectricalContractor", "name": "Osborne Electric & Contracting", "telephone": "+1-801-885-4521", "areaServed": {"@type": "City", "name": "South Jordan", "containedInPlace": {"@type": "State", "name": "Utah"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "South Jordan",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Salt Lake County",
+      "containedInPlace": {"@type": "State", "name": "Utah"}
+    }
+  },
+  "address": {"@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Salt Lake County", "item": "https://osborne-electric.com/areas/salt-lake-county/"},
+    {"@type": "ListItem", "position": 4, "name": "South Jordan"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of South Jordan does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of South Jordan, Utah, including the Daybreak community, Oquirrh Mountain neighborhoods, the River Run area, and established neighborhoods along Redwood Road. We also serve neighboring Herriman, Riverton, and West Jordan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do newer Daybreak homes need electrical work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While Daybreak homes are relatively new, many homeowners add circuits for home offices, EV chargers, upgraded lighting, and smart home systems. The original wiring may not include dedicated lines for all modern equipment needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you schedule service in South Jordan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We schedule routine electrical work in South Jordan within a few business days. For emergencies like power outages or safety hazards, we offer priority scheduling. Call 801-885-4521 for immediate assistance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your electricians licensed in South Jordan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric holds a Master Electrician license valid throughout Utah, including South Jordan and all municipalities in Salt Lake County. We carry full insurance and handle all required permits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you install EV chargers in South Jordan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric installs Level 2 EV chargers in South Jordan homes, including panel capacity assessment, dedicated 240-volt circuit installation, and any panel upgrades needed. We handle permitting through South Jordan City."
+      }
+    }
+  ]
+}
 </script>
 {% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-09.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> South Jordan</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> <a href="/areas/salt-lake-county/">Salt Lake County</a> <span>/</span> South Jordan
+    </nav>
     <h1>Electrician in South Jordan, Utah</h1>
-    <p>Licensed Master Electricians serving South Jordan and Daybreak</p>
+    <p>Licensed Master Electricians serving South Jordan, Daybreak, and surrounding communities.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed master electrician services in South Jordan, Utah, including the Daybreak community and Oquirrh Mountain neighborhoods. Services include panel upgrades, lighting installation, outlet and circuit repair, EV charger installation, smart home wiring, and emergency electrical service. Family-owned with transparent pricing and free estimates.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-09.jpg" alt="Electrician South Jordan Utah" loading="lazy">
+        <img src="/images/work/project-09.jpg" alt="Residential electrical work in South Jordan, Utah by Osborne Electric" loading="lazy">
       </div>
       <div>
         <h2>Your Trusted South Jordan Electrician</h2>
-        <p>Looking for an electrician in South Jordan, Utah? Osborne Electric provides professional residential electrical services to homeowners throughout South Jordan, including the Daybreak community and Herriman border areas.</p>
-        <p>Our licensed Master Electricians specialize in both new construction and existing home electrical work.</p>
-        
+        <p>South Jordan has experienced significant growth over the past two decades, with the Daybreak master-planned community and new developments near the Oquirrh Mountains bringing modern homes to the area. While newer homes have updated wiring, many homeowners still need additional circuits for EV chargers, home offices, and upgraded lighting. Established neighborhoods along Redwood Road may need panel upgrades and wiring updates.</p>
+        <p>Osborne Electric provides residential electrical services throughout South Jordan with licensed Master Electricians who deliver quality work at honest prices.</p>
+
         <h3>Electrical Services in South Jordan:</h3>
         <ul class="value-list">
-          <li>Electrical repairs & troubleshooting</li>
-          <li>Panel upgrades & replacements</li>
-          <li>Recessed & LED lighting installation</li>
-          <li>Smart home wiring</li>
+          <li>Electrical repairs and troubleshooting</li>
+          <li><a href="/services/panel-upgrades/">Panel upgrades</a> and replacements</li>
+          <li><a href="/services/lighting-installation/">Recessed and LED lighting installation</a></li>
+          <li>Outlet and switch installation</li>
           <li>EV charger installation</li>
-          <li>Home rewiring</li>
-          <li>Emergency electrical service</li>
+          <li><a href="/services/power-restoration/">Emergency electrical service</a></li>
+          <li><a href="/services/remodels-new-construction/">Remodel and addition wiring</a></li>
+          <li>Smart home wiring and automation</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why South Jordan Homeowners Choose Us</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>The highest level of electrical licensing in Utah. Expert craftsmanship on every project.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned Business</h3>
+        <p>Owner Trevor Osborne personally oversees your project with direct accountability.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>Clear quotes before work begins. No hidden fees or surprise charges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What areas of South Jordan does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of South Jordan, Utah, including the Daybreak community, Oquirrh Mountain neighborhoods, the River Run area, and established neighborhoods along Redwood Road. We also serve neighboring Herriman, Riverton, and West Jordan.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do newer Daybreak homes need electrical work?</summary>
+        <div class="faq-details-body">
+          <p>While Daybreak homes are relatively new, many homeowners add circuits for home offices, EV chargers, upgraded <a href="/services/lighting-installation/">lighting</a>, and smart home systems. The original wiring may not include dedicated lines for all modern equipment needs.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How quickly can you schedule service in South Jordan?</summary>
+        <div class="faq-details-body">
+          <p>We schedule routine electrical work in South Jordan within a few business days. For emergencies like power outages or safety hazards, we offer priority scheduling. Call <a href="tel:801-885-4521">801-885-4521</a> for immediate assistance.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Are your electricians licensed in South Jordan?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric holds a Master Electrician license valid throughout Utah, including South Jordan and all municipalities in Salt Lake County. We carry full insurance and handle all required permits.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you install EV chargers in South Jordan?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric installs Level 2 EV chargers in South Jordan homes, including panel capacity assessment, dedicated 240-volt circuit installation, and any <a href="/services/panel-upgrades/">panel upgrades</a> needed. We handle permitting through South Jordan City.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, outlets, circuits, and safety inspections.</p>
+      </a>
+      <a href="/services/lighting-installation/" class="internal-link-card">
+        <h4>Lighting Installation</h4>
+        <p>Recessed lighting, LED upgrades, and fixture installation.</p>
+      </a>
+      <a href="/areas/salt-lake-county/" class="internal-link-card">
+        <h4>Salt Lake County</h4>
+        <p>Serving Sandy, Draper, Murray, West Valley, and all of Salt Lake County.</p>
+      </a>
+      <a href="/areas/draper-ut/" class="internal-link-card">
+        <h4>Draper</h4>
+        <p>Electrical services in neighboring Draper, Utah.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -50,11 +227,15 @@ description: "Licensed electrician in South Jordan, UT. Residential electrical s
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in South Jordan?</h2>
-    <p>Contact us today for fast, reliable electrical service.</p>
+    <p>Contact us for fast, reliable residential electrical service in South Jordan and surrounding areas.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

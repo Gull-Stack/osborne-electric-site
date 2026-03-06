@@ -1,48 +1,225 @@
 ---
 title: "Electrician Layton Utah | Osborne Electric"
-description: "Licensed electrician in Layton, UT. Residential electrical services, panel upgrades, lighting installation & emergency repairs. Master Electricians. Call 801-885-4521."
+description: "Licensed electrician in Layton, UT. Residential electrical services, panel upgrades, lighting installation, and emergency repairs. Master Electricians. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
 {% block schema %}
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "ElectricalContractor", "name": "Osborne Electric & Contracting", "telephone": "+1-801-885-4521", "areaServed": {"@type": "City", "name": "Layton", "containedInPlace": {"@type": "State", "name": "Utah"}}}
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "City",
+    "name": "Layton",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Davis County",
+      "containedInPlace": {"@type": "State", "name": "Utah"}
+    }
+  },
+  "address": {"@type": "PostalAddress", "addressRegion": "UT", "addressCountry": "US"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Davis County", "item": "https://osborne-electric.com/areas/davis-county/"},
+    {"@type": "ListItem", "position": 4, "name": "Layton"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What areas of Layton does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Layton, Utah, including Layton Hills, East Layton, the area near Hill Air Force Base, Kays Creek, and downtown Layton. We also serve neighboring Kaysville, Clearfield, Syracuse, Farmington, and other Davis County communities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you work with military families near Hill Air Force Base?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many of our Layton customers are military families stationed at or working on Hill Air Force Base. We understand the needs of military households, including quick-turnaround projects for families on reassignment timelines, electrical upgrades for rental properties, and ensuring homes meet inspection requirements. We work around your schedule and provide upfront pricing so there are no surprises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How quickly can you schedule electrical work in Layton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We typically schedule routine electrical work in Layton within a few business days. For urgent issues like power outages, sparking outlets, or safety hazards, we offer priority scheduling to address the problem as quickly as possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your electricians licensed to work in Layton?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Layton and all municipalities in Davis County. We carry full insurance and pull all required permits for every job."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you install an EV charger at my Layton home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric installs Level 2 EV chargers in Layton homes, including the dedicated 240-volt circuit, panel capacity assessment, and any upgrades needed to support the charger. We handle permitting through Layton City as part of the installation and can advise on the best charger placement for your garage or driveway."
+      }
+    }
+  ]
+}
 </script>
 {% endblock %}
 
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-16.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb"><a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Layton</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> <a href="/areas/davis-county/">Davis County</a> <span>/</span> Layton
+    </nav>
     <h1>Electrician in Layton, Utah</h1>
-    <p>Licensed Master Electricians serving Layton and North Davis County</p>
+    <p>Licensed Master Electricians serving Layton and North Davis County.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed master electrician services in Layton, Utah, serving neighborhoods from Layton Hills and East Layton to the areas near Hill Air Force Base, Kays Creek, and downtown. Services include panel upgrades, lighting installation, outlet and circuit repair, whole-home rewiring, EV charger installation, and emergency electrical repair. Family-owned with transparent pricing and free estimates.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-16.jpg" alt="Electrician Layton Utah" loading="lazy">
+        <img src="/images/work/project-16.jpg" alt="Residential electrical work in Layton, Utah by Osborne Electric" loading="lazy">
       </div>
       <div>
         <h2>Your Trusted Layton Electrician</h2>
-        <p>Looking for an electrician in Layton, Utah? Osborne Electric provides professional residential electrical services throughout Layton, Kaysville, Farmington, Syracuse, and Clearfield.</p>
-        <p>Our licensed Master Electricians deliver quality electrical work to Davis County families.</p>
-        
+        <p>Layton is one of Davis County's largest and fastest-growing cities, with neighborhoods that span from the established downtown core to newer developments in Layton Hills and East Layton. The city's proximity to Hill Air Force Base means a steady mix of long-time residents and military families, each with distinct electrical needs -- from updating older homes near Kays Creek to wiring modern builds in the eastern foothills.</p>
+        <p>Osborne Electric provides professional residential electrical services throughout all of Layton. Our licensed Master Electricians deliver expert work with honest pricing on every project, whether you need a quick repair or a full electrical system upgrade.</p>
+
         <h3>Electrical Services in Layton:</h3>
         <ul class="value-list">
-          <li>Electrical repairs & troubleshooting</li>
-          <li>Panel upgrades & replacements</li>
-          <li>Recessed & LED lighting installation</li>
-          <li>Outlet & switch installation</li>
-          <li>Smoke detector installation</li>
+          <li>Electrical repairs and troubleshooting</li>
+          <li>Panel upgrades and replacements</li>
+          <li><a href="/services/lighting-installation/">Recessed and LED lighting installation</a></li>
+          <li>Outlet and switch installation</li>
+          <li>EV charger installation</li>
           <li>Home rewiring</li>
           <li>Emergency electrical service</li>
+          <li>Remodel and new construction wiring</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Layton Homeowners Choose Osborne Electric</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>The highest level of electrical licensing in Utah. Every project is completed to code with expert craftsmanship.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned Business</h3>
+        <p>Owner Trevor Osborne personally oversees your project. Direct accountability and no subcontractors.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest, Upfront Pricing</h3>
+        <p>Clear, detailed quotes before work begins. No hidden fees and no surprise charges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What areas of Layton does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of Layton, Utah, including Layton Hills, East Layton, the area near Hill Air Force Base, Kays Creek, and downtown Layton. We also serve neighboring Kaysville, Clearfield, Syracuse, Farmington, and other Davis County communities.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you work with military families near Hill Air Force Base?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Many of our Layton customers are military families stationed at or working on Hill Air Force Base. We understand the needs of military households, including quick-turnaround projects for families on reassignment timelines, electrical upgrades for rental properties, and ensuring homes meet inspection requirements. We work around your schedule and provide upfront pricing so there are no surprises.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How quickly can you schedule electrical work in Layton?</summary>
+        <div class="faq-details-body">
+          <p>We typically schedule routine electrical work in Layton within a few business days. For urgent issues like power outages, sparking outlets, or safety hazards, we offer priority scheduling to address the problem as quickly as possible.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Are your electricians licensed to work in Layton?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric holds a Master Electrician license valid throughout the state of Utah, including Layton and all municipalities in Davis County. We carry full insurance and pull all required permits for every job.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Can you install an EV charger at my Layton home?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric installs Level 2 EV chargers in Layton homes, including the dedicated 240-volt circuit, panel capacity assessment, and any upgrades needed to support the charger. We handle permitting through Layton City as part of the installation and can advise on the best charger placement for your garage or driveway.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, outlets, circuits, and safety inspections.</p>
+      </a>
+      <a href="/services/lighting-installation/" class="internal-link-card">
+        <h4>Lighting Installation</h4>
+        <p>Recessed lighting, LED upgrades, and fixture installation.</p>
+      </a>
+      <a href="/areas/davis-county/" class="internal-link-card">
+        <h4>Davis County</h4>
+        <p>Serving Bountiful, Kaysville, Farmington, Centerville, and all of Davis County.</p>
+      </a>
+      <a href="/areas/bountiful-ut/" class="internal-link-card">
+        <h4>Bountiful</h4>
+        <p>Electrical services in neighboring Bountiful, Utah.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -50,11 +227,15 @@ description: "Licensed electrician in Layton, UT. Residential electrical service
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Layton?</h2>
-    <p>Contact us today for fast, reliable electrical service.</p>
+    <p>Contact us for fast, reliable residential electrical service in Layton and surrounding areas.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

@@ -1,56 +1,242 @@
 ---
-title: "Power Restoration & Emergency Electrical | Osborne Electric Utah"
-description: "Emergency electrical repairs and power restoration in Utah. Fast response when you need it most. Licensed Master Electricians. Call 801-885-4521."
+title: "Emergency Electrical Repair Utah | Osborne Electric"
+description: "Emergency electrical repair and power restoration in Utah. Fast response for outages, storm damage, circuit failures, and electrical hazards. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Emergency Electrical Repair & Power Restoration",
+  "provider": {
+    "@type": "ElectricalContractor",
+    "name": "Osborne Electric & Contracting",
+    "telephone": "+1-801-885-4521"
+  },
+  "areaServed": [
+    {"@type": "County", "name": "Salt Lake County"},
+    {"@type": "County", "name": "Utah County"},
+    {"@type": "County", "name": "Davis County"},
+    {"@type": "County", "name": "Tooele County"},
+    {"@type": "County", "name": "Summit County"}
+  ],
+  "description": "Emergency electrical repair and power restoration services including power outage response, storm damage repair, circuit troubleshooting, outlet and switch repair, and 24/7 emergency availability."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://osborne-electric.com/services/"},
+    {"@type": "ListItem", "position": 3, "name": "Power Restoration & Emergency"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What should I do if I lose power in part of my house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First, check your electrical panel for tripped breakers and try resetting them once. If the breaker trips again immediately, do not keep resetting it -- this indicates a fault that needs professional diagnosis. Check whether neighbors have power to rule out a utility outage. If the problem is isolated to your home, call Osborne Electric at 801-885-4521 for diagnosis and repair."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer emergency electrical service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Osborne Electric provides emergency electrical repair services for situations that pose safety hazards, such as exposed wiring, burning smells, sparking outlets, and complete power loss. Call 801-885-4521 and we will prioritize your call to get your home safe as quickly as possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does emergency electrical repair cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Emergency electrical repair costs vary depending on the nature of the problem. Simple breaker replacements or loose connections may cost $150 to $300. More complex issues like storm damage or failed panels may cost more. Osborne Electric provides a clear diagnosis and upfront pricing before beginning any repair work."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What causes a circuit breaker to keep tripping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Repeated breaker trips are typically caused by an overloaded circuit, a short circuit in the wiring, a ground fault, or a failing breaker. Overloads happen when too many devices draw power from one circuit. Short circuits and ground faults indicate wiring problems that need professional repair. A licensed electrician can diagnose the exact cause and fix it safely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can storm damage affect my home's electrical system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Lightning strikes, power surges, fallen trees, and wind damage can all affect your home's electrical system. Storm damage may cause panel failures, damaged wiring, blown circuits, or damaged meter bases. After a severe storm, have a licensed electrician inspect your system if you experience any electrical irregularities."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/wires.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb">
-      <a href="/">Home</a> <span>/</span> <a href="/services/">Services</a> <span>/</span> Power Restoration
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> <span>/</span> <a href="/services/">Services</a> <span>/</span> Power Restoration & Emergency
     </nav>
-    <h1>Power Restoration & Emergency Service</h1>
-    <p>Fast response when you need it most</p>
+    <h1>Emergency Electrical Repair & Power Restoration</h1>
+    <p>Fast response when you need it most -- licensed Master Electricians across Utah.</p>
+    <div class="btn-group btn-group--center">
+      <a href="tel:801-885-4521" class="btn btn-primary">Call Now: 801-885-4521</a>
+      <a href="/contact/" class="btn btn-white">Request Emergency Service</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides emergency electrical repair and power restoration services across Salt Lake, Utah, Davis, Tooele, and Summit Counties. Licensed Master Electrician Trevor Osborne and his team respond to power outages, storm damage, circuit failures, sparking outlets, and electrical hazards. Family-owned with priority scheduling for emergencies and upfront pricing on every repair.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/wires.jpg" alt="Emergency electrical repair" loading="lazy">
+        <img src="/images/work/wires.jpg" alt="Emergency electrical repair by Osborne Electric in Utah" loading="lazy">
       </div>
       <div>
-        <h2>Lost Power? We're Here to Help.</h2>
-        <p>Electrical emergencies don't wait for convenient times. When you lose power or have an urgent electrical problem, Osborne Electric responds quickly to diagnose and fix the issue.</p>
-        <p>Our licensed Master Electricians have the experience to troubleshoot complex problems and restore your power safely.</p>
-        
-        <h3>Emergency Services Include:</h3>
+        <h2>Lost Power? We Are Here to Help.</h2>
+        <p>Electrical emergencies do not wait for business hours. When your power goes out, a breaker will not reset, you smell burning near an outlet, or a storm has damaged your electrical system, you need a licensed electrician who can respond quickly and diagnose the problem correctly the first time.</p>
+        <p>Osborne Electric provides priority scheduling for electrical emergencies across our entire five-county service area. Our licensed Master Electricians carry the diagnostic tools and parts needed to resolve most issues in a single visit.</p>
         <ul class="value-list">
-          <li>Power outage diagnosis</li>
-          <li>Circuit breaker failures</li>
-          <li>Electrical shorts</li>
-          <li>Storm damage repairs</li>
-          <li>Burning smell investigation</li>
-          <li>Sparking outlets</li>
-          <li>Safety hazard resolution</li>
+          <li>Power outage diagnosis and restoration</li>
+          <li>Circuit breaker failures and replacement</li>
+          <li>Electrical shorts and ground faults</li>
+          <li>Storm damage assessment and repair</li>
+          <li>Sparking or arcing outlet repair</li>
+          <li>Burning smell investigation and resolution</li>
+          <li>Damaged wiring repair</li>
+          <li>Emergency panel repair or replacement</li>
+          <li>Safety hazard assessment</li>
         </ul>
-        
         <a href="tel:801-885-4521" class="btn btn-primary">Call Now: 801-885-4521</a>
       </div>
     </div>
   </div>
 </section>
 
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="content-grid reverse">
+      <div class="content-image">
+        <img src="/images/work/project-06.jpg" alt="Electrician diagnosing power outage in Utah home" loading="lazy">
+      </div>
+      <div>
+        <h2>When to Call an Emergency Electrician</h2>
+        <p>Not every electrical issue is an emergency, but some situations require immediate professional attention. The following warrant an urgent call:</p>
+        <ul class="features-list">
+          <li>Burning smell coming from an outlet, switch, or panel</li>
+          <li>Visible sparking or arcing from any electrical component</li>
+          <li>Complete loss of power not caused by a utility outage</li>
+          <li>Water exposure to your electrical panel or wiring</li>
+          <li>A breaker that trips immediately after being reset</li>
+          <li>Outlets or switches that are hot to the touch</li>
+          <li>Exposed or damaged wiring from storm or construction damage</li>
+        </ul>
+        <p>If you are unsure whether your situation is an emergency, call us. We will help you assess the situation over the phone and determine the right course of action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Common questions about emergency electrical repair in Utah.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What should I do if I lose power in part of my house?</summary>
+        <div class="faq-details-body">
+          <p>First, check your electrical panel for tripped breakers and try resetting them once. If the breaker trips again immediately, do not keep resetting it -- this indicates a fault that needs professional diagnosis. Check whether neighbors have power to rule out a utility outage. If the problem is isolated to your home, call <a href="tel:801-885-4521">801-885-4521</a> for diagnosis and repair.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do you offer emergency electrical service?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Osborne Electric provides emergency electrical repair services for situations that pose safety hazards, such as exposed wiring, burning smells, sparking outlets, and complete power loss. Call <a href="tel:801-885-4521">801-885-4521</a> and we will prioritize your call to get your home safe as quickly as possible.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How much does emergency electrical repair cost?</summary>
+        <div class="faq-details-body">
+          <p>Emergency electrical repair costs vary depending on the nature of the problem. Simple breaker replacements or loose connections may cost $150 to $300. More complex issues like storm damage or failed panels may cost more. Osborne Electric provides a clear diagnosis and upfront pricing before beginning any repair work.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>What causes a circuit breaker to keep tripping?</summary>
+        <div class="faq-details-body">
+          <p>Repeated breaker trips are typically caused by an overloaded circuit, a short circuit in the wiring, a ground fault, or a failing breaker. Overloads happen when too many devices draw power from one circuit. Short circuits and ground faults indicate wiring problems that need professional repair. A licensed electrician can diagnose the exact cause and fix it safely.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Can storm damage affect my home's electrical system?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Lightning strikes, power surges, fallen trees, and wind damage can all affect your home's electrical system. Storm damage may cause panel failures, damaged wiring, blown circuits, or damaged meter bases. After a severe storm, have a licensed electrician inspect your system if you experience any electrical irregularities.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Internal Links -->
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Areas</h3>
+    <div class="internal-links">
+      <a href="/services/panel-upgrades/" class="internal-link-card">
+        <h4>Panel Upgrades</h4>
+        <p>If your panel is failing, it may be time for a full upgrade to a modern 200-amp system.</p>
+      </a>
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical repair, circuit troubleshooting, and safety inspections.</p>
+      </a>
+      <a href="/areas/davis-county/" class="internal-link-card">
+        <h4>Davis County Electrician</h4>
+        <p>Emergency electrical services in Bountiful, Layton, Farmington, and surrounding areas.</p>
+      </a>
+      <a href="/areas/salt-lake-county/" class="internal-link-card">
+        <h4>Salt Lake County Electrician</h4>
+        <p>Power restoration and emergency repair throughout Salt Lake County.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
     <h2>Electrical Emergency?</h2>
-    <p>Don't wait—call us now for fast, reliable service.</p>
+    <p>Do not wait -- call Osborne Electric now for fast, reliable emergency service across Utah.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request Emergency Service</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

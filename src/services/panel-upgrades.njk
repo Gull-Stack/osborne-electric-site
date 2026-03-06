@@ -1,56 +1,256 @@
 ---
-title: "Electrical Panel Upgrades | Osborne Electric Utah"
-description: "Professional electrical panel upgrades in Utah. Replace outdated panels, increase capacity, and improve safety. Licensed Master Electricians. Call 801-885-4521."
+title: "Electrical Panel Upgrade Utah | Osborne Electric"
+description: "Professional electrical panel upgrades in Utah. 100A to 200A upgrades, subpanel installation, breaker replacement, EV charger prep, and code compliance. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Electrical Panel Upgrades",
+  "provider": {
+    "@type": "ElectricalContractor",
+    "name": "Osborne Electric & Contracting",
+    "telephone": "+1-801-885-4521"
+  },
+  "areaServed": [
+    {"@type": "County", "name": "Salt Lake County"},
+    {"@type": "County", "name": "Utah County"},
+    {"@type": "County", "name": "Davis County"},
+    {"@type": "County", "name": "Tooele County"},
+    {"@type": "County", "name": "Summit County"}
+  ],
+  "description": "Electrical panel upgrade services including 100-amp to 200-amp upgrades, subpanel installation, breaker replacement, fuse box replacement, EV charger prep, and full code compliance."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://osborne-electric.com/services/"},
+    {"@type": "ListItem", "position": 3, "name": "Panel Upgrades"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does an electrical panel upgrade cost in Utah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An electrical panel upgrade in Utah typically costs between $1,500 and $4,000 for a standard 200-amp panel replacement. Costs vary based on panel size, permit fees, whether the meter base needs replacement, and the condition of existing wiring. Osborne Electric provides free estimates for panel upgrades across all five counties we serve."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I need to upgrade from 100 amps to 200 amps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You should upgrade to 200 amps if you are adding an EV charger, hot tub, or major appliances; if your breakers trip frequently; if you are planning a home addition or remodel; or if your home still has a fuse box. Most modern Utah homes require 200 amps to safely handle current electrical loads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a permit for a panel upgrade in Utah?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Electrical panel upgrades require a permit in all Utah municipalities. The permit ensures the work is inspected and meets current electrical codes. Osborne Electric handles the entire permit process, including application, scheduling inspections, and ensuring the installation passes on the first inspection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a subpanel and do I need one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A subpanel is a secondary electrical panel that distributes power to a specific area of your home, such as a garage, workshop, or addition. Subpanels are useful when your main panel is full or when you need circuits in an area far from the main panel. Osborne Electric installs subpanels rated from 60 to 125 amps depending on your needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I upgrade my panel to support an EV charger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Most Level 2 EV chargers require a dedicated 240-volt, 40 to 50-amp circuit. If your current panel does not have capacity for this circuit, a panel upgrade or subpanel installation will be needed. Osborne Electric handles the full process from panel assessment through charger circuit installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a panel upgrade take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most residential panel upgrades are completed in a single day. A standard 100-amp to 200-amp upgrade typically involves replacing the panel, updating the meter base if required, and reconnecting all circuits. Your power will be off for a portion of the day while the work is performed."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/meter.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span>/</span> <a href="/services/">Services</a> <span>/</span> Panel Upgrades
     </nav>
     <h1>Electrical Panel Upgrades</h1>
-    <p>Safe, modern power for your home</p>
+    <p>Safe, modern power for your home -- from licensed Master Electricians in Utah.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides electrical panel upgrade services across Salt Lake, Utah, Davis, Tooele, and Summit Counties. Licensed Master Electrician Trevor Osborne and his team perform 100-amp to 200-amp upgrades, subpanel installations, breaker replacements, fuse box replacements, and EV charger prep. All work is permitted, inspected, and code-compliant. Family-owned with free estimates.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/meter.jpg" alt="Electrical panel upgrade" loading="lazy">
+        <img src="/images/work/meter.jpg" alt="Electrical panel upgrade by Osborne Electric in Utah" loading="lazy">
       </div>
       <div>
-        <h2>Is Your Panel Ready for Modern Life?</h2>
-        <p>Older electrical panels can't keep up with today's power demands. If your breakers trip frequently, your lights flicker, or your panel is over 25 years old, it may be time for an upgrade.</p>
-        <p>Osborne Electric installs modern, safe electrical panels that handle everything your home needs—now and in the future.</p>
-        
-        <h3>Signs You Need a Panel Upgrade:</h3>
+        <h2>Is Your Electrical Panel Ready for Modern Life?</h2>
+        <p>Your electrical panel is the heart of your home's power system. It distributes electricity to every circuit, and when it cannot keep up with demand, problems follow -- tripped breakers, flickering lights, and potential fire hazards. Many Utah homes built before 2000 still have 100-amp panels or outdated fuse boxes that were never designed for today's electrical loads.</p>
+        <p>Osborne Electric upgrades panels to meet current NEC and Utah code requirements, ensuring your home has the capacity to safely power modern appliances, EV chargers, home offices, and more.</p>
         <ul class="value-list">
-          <li>Breakers trip frequently</li>
-          <li>Flickering or dimming lights</li>
-          <li>Burning smell near the panel</li>
-          <li>Panel is warm to the touch</li>
-          <li>Home still has a fuse box</li>
-          <li>Adding major appliances (EV charger, hot tub)</li>
-          <li>Planning a home addition</li>
+          <li>100-amp to 200-amp panel upgrades</li>
+          <li>Fuse box to breaker panel replacement</li>
+          <li>Subpanel installation (garage, workshop, addition)</li>
+          <li>Breaker replacement and panel repair</li>
+          <li>EV charger circuit prep and installation</li>
+          <li>Meter base replacement when required</li>
+          <li>Full code compliance and permit coordination</li>
+          <li>Whole-home surge protection installation</li>
         </ul>
-        
         <a href="/contact/" class="btn btn-primary">Schedule an Inspection</a>
       </div>
     </div>
   </div>
 </section>
 
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="content-grid reverse">
+      <div class="content-image">
+        <img src="/images/work/new.jpg" alt="New electrical panel installation by licensed Utah electrician" loading="lazy">
+      </div>
+      <div>
+        <h2>Signs You Need a Panel Upgrade</h2>
+        <p>Electrical panels do not last forever, and an undersized or deteriorating panel poses real safety risks. The following signs indicate your panel may need professional evaluation:</p>
+        <ul class="features-list">
+          <li>Breakers trip frequently or will not stay reset</li>
+          <li>Lights flicker or dim when appliances turn on</li>
+          <li>Burning smell or discoloration near the panel</li>
+          <li>Panel is warm to the touch</li>
+          <li>Home still has a fuse box instead of breakers</li>
+          <li>Adding major appliances -- EV charger, hot tub, or workshop</li>
+          <li>Planning a home addition or remodel</li>
+          <li>Home insurance requires a panel upgrade</li>
+        </ul>
+        <p>Osborne Electric offers free panel inspections. We will assess your current system and provide an honest recommendation on whether an upgrade is necessary.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <p>Common questions about electrical panel upgrades in Utah.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>How much does an electrical panel upgrade cost in Utah?</summary>
+        <div class="faq-details-body">
+          <p>An electrical panel upgrade in Utah typically costs between $1,500 and $4,000 for a standard 200-amp panel replacement. Costs vary based on panel size, permit fees, whether the meter base needs replacement, and the condition of existing wiring. Call <a href="tel:801-885-4521">801-885-4521</a> for a free estimate. See our <a href="/guides/electrical-panel-upgrade-cost-utah/">detailed cost guide</a> for more information.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>When do I need to upgrade from 100 amps to 200 amps?</summary>
+        <div class="faq-details-body">
+          <p>You should upgrade to 200 amps if you are adding an EV charger, hot tub, or major appliances; if your breakers trip frequently; if you are planning a home addition or remodel; or if your home still has a fuse box. Most modern Utah homes require 200 amps to safely handle current electrical loads.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do I need a permit for a panel upgrade in Utah?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Electrical panel upgrades require a permit in all Utah municipalities. The permit ensures the work is inspected and meets current electrical codes. Osborne Electric handles the entire permit process, including application, scheduling inspections, and ensuring the installation passes on the first inspection.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>What is a subpanel and do I need one?</summary>
+        <div class="faq-details-body">
+          <p>A subpanel is a secondary electrical panel that distributes power to a specific area of your home, such as a garage, workshop, or addition. Subpanels are useful when your main panel is full or when you need circuits in an area far from the main panel. Osborne Electric installs subpanels rated from 60 to 125 amps depending on your needs.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Can I upgrade my panel to support an EV charger?</summary>
+        <div class="faq-details-body">
+          <p>Yes. Most Level 2 EV chargers require a dedicated 240-volt, 40 to 50-amp circuit. If your current panel does not have capacity for this circuit, a panel upgrade or subpanel installation will be needed. Osborne Electric handles the full process from panel assessment through charger circuit installation.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How long does a panel upgrade take?</summary>
+        <div class="faq-details-body">
+          <p>Most residential panel upgrades are completed in a single day. A standard 100-amp to 200-amp upgrade typically involves replacing the panel, updating the meter base if required, and reconnecting all circuits. Your power will be off for a portion of the day while the work is performed.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Internal Links -->
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Areas</h3>
+    <div class="internal-links">
+      <a href="/guides/electrical-panel-upgrade-cost-utah/" class="internal-link-card">
+        <h4>Panel Upgrade Cost Guide</h4>
+        <p>Detailed pricing breakdown for electrical panel upgrades in Utah.</p>
+      </a>
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical services -- outlets, circuits, rewiring, and safety inspections.</p>
+      </a>
+      <a href="/areas/utah-county/" class="internal-link-card">
+        <h4>Utah County Electrician</h4>
+        <p>Panel upgrades and electrical services in Provo, Orem, Lehi, and American Fork.</p>
+      </a>
+      <a href="/services/remodels-new-construction/" class="internal-link-card">
+        <h4>Remodels & New Construction</h4>
+        <p>Electrical wiring for home remodels, additions, and new builds.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>Concerned About Your Panel?</h2>
-    <p>We offer free inspections and honest assessments.</p>
+    <h2>Concerned About Your Electrical Panel?</h2>
+    <p>Contact Osborne Electric for a free panel inspection and honest assessment.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}
