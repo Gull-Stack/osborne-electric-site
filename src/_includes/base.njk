@@ -3,48 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="{{ description | default('Osborne Electric & Contracting - Utah\'s trusted electricians serving Salt Lake, Utah, and Summit Counties. Licensed electricians for residential, commercial, and emergency electrical services. Call 801-885-4521.') }}">
+  <meta name="description" content="{{ description | default('Osborne Electric & Contracting - Utah\'s trusted master electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Licensed electricians for residential electrical services. Call 801-885-4521.') }}">
   <meta name="author" content="Osborne Electric & Contracting">
   <meta name="robots" content="index, follow">
-  
+
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ title | default('Osborne Electric & Contracting | Utah\'s Trusted Electricians') }}">
-  <meta property="og:description" content="{{ description | default('Licensed electricians serving Salt Lake, Utah, and Summit Counties. Residential electrical, panel upgrades, lighting, and emergency repairs. Call 801-885-4521.') }}">
+  <meta property="og:title" content="{{ title | default('Osborne Electric & Contracting | Utah\'s Trusted Master Electricians') }}">
+  <meta property="og:description" content="{{ description | default('Licensed master electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Residential electrical, panel upgrades, lighting, and emergency repairs. Call 801-885-4521.') }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://osborne-electric.com{{ page.url }}">
-  <meta property="og:image" content="https://osborne-electric.com/images/og-image.jpg">
+  <meta property="og:image" content="https://osborne-electric.com/images/work/new.jpg">
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Osborne Electric & Contracting">
-  
+
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title | default('Osborne Electric & Contracting | Utah\'s Trusted Electricians') }}">
-  <meta name="twitter:description" content="{{ description | default('Licensed electricians serving Salt Lake, Utah, and Summit Counties. Call 801-885-4521.') }}">
-  
+  <meta name="twitter:title" content="{{ title | default('Osborne Electric & Contracting | Utah\'s Trusted Master Electricians') }}">
+  <meta name="twitter:description" content="{{ description | default('Licensed master electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Call 801-885-4521.') }}">
+
   <!-- Canonical -->
   <link rel="canonical" href="https://osborne-electric.com{{ page.url }}">
-  
-  <title>{{ title | default('Osborne Electric & Contracting | Electrician Salt Lake City, Utah') }}</title>
-  
+
+  <title>{{ title | default('Osborne Electric & Contracting | Master Electrician Utah') }}</title>
+
   <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2VFYR6C99S"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C39CXG1F4V"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-2VFYR6C99S');
+    gtag('config', 'G-C39CXG1F4V');
   </script>
-  
+
+  <!-- Fonts: Inter + Syne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
-  
+
   {% block schema %}{% endblock %}
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  
+
   {% include "header.njk" %}
 
   <main id="main">
@@ -63,25 +64,23 @@
         }
       });
     });
-    
-    // FAQ toggle
+
+    // FAQ toggle (legacy JS-based)
     document.querySelectorAll('.faq-question').forEach(function(el) {
       el.addEventListener('click', function() {
         this.parentElement.classList.toggle('active');
       });
     });
-    
-    // GA4 Event Tracking: Phone Clicks
+
+    // GA4 Event: Phone Clicks
     document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
       el.addEventListener('click', function() {
         var phoneNum = this.href.replace('tel:', '');
-        // GA4
         gtag('event', 'phone_click', {
           'event_category': 'contact',
           'event_label': phoneNum,
           'value': 1
         });
-        // SuperTool
         fetch('/api/track', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -94,17 +93,41 @@
         }).catch(function() {});
       });
     });
-    
-    // GA4 Event Tracking: Form Submissions
+
+    // GA4 Event: Form Submissions
     document.querySelectorAll('form').forEach(function(form) {
       form.addEventListener('submit', function() {
-        gtag('event', 'form_submit', {
+        gtag('event', 'form_submission', {
           'event_category': 'contact',
           'event_label': window.location.pathname,
           'value': 1
         });
       });
     });
+
+    // GA4 Event: Email Clicks
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var email = this.href.replace('mailto:', '');
+        gtag('event', 'email_click', {
+          'event_category': 'contact',
+          'event_label': email,
+          'value': 1
+        });
+      });
+    });
+
+    // Header scroll effect
+    var header = document.querySelector('.header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 20) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
   </script>
 </body>
 </html>

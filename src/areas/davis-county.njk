@@ -1,47 +1,194 @@
 ---
-title: "Electrician Davis County | Osborne Electric"
-description: "Licensed electricians serving Davis County - Bountiful, Layton, Farmington, Kaysville & more. Residential electrical services. Call 801-885-4521."
+title: "Electrician Davis County UT | Osborne Electric"
+description: "Licensed electricians serving Davis County -- Bountiful, Layton, Farmington, Kaysville, Centerville, and Woods Cross. Residential electrical experts. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Davis County",
+    "containedInPlace": {"@type": "State", "name": "Utah"}
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "UT",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Davis County"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What cities in Davis County does Osborne Electric serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all Davis County communities including Bountiful, Layton, Farmington, Kaysville, Centerville, and Woods Cross. Our licensed Master Electricians provide residential electrical services to homeowners throughout the entire county, from the southern border near North Salt Lake to the northern edge near Weber County."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do older homes in Davis County typically need electrical upgrades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many homes in established Davis County neighborhoods like Bountiful and Kaysville were built with 100-amp or even 60-amp panels that cannot handle modern electrical demands. We frequently perform panel upgrades to 200-amp service, replace outdated wiring, install GFCI and AFCI protection, and add circuits for home offices, EV chargers, and modern appliances."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does an electrician in Davis County typically charge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pricing varies by the scope of work, but Osborne Electric provides free, detailed estimates before any work begins. We believe in transparent pricing with no hidden fees. Call us at 801-885-4521 to discuss your project and receive a straightforward quote you can count on."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-04.jpg')"></div>
   <div class="container">
     <nav class="breadcrumb">
       <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Davis County
     </nav>
     <h1>Davis County Electrician</h1>
-    <p>Trusted residential electrical services throughout Davis County</p>
+    <p>Licensed Master Electricians serving Bountiful, Layton, and all of Davis County</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric provides licensed residential electrical services throughout Davis County, Utah. Serving Bountiful, Layton, Farmington, Kaysville, Centerville, and Woods Cross, owner Trevor Osborne and his team deliver panel upgrades, lighting installations, home rewiring, and emergency repairs with Master Electrician credentials and upfront pricing.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-04.jpg" alt="Electrical work in Davis County" loading="lazy">
+        <img src="/images/work/project-04.jpg" alt="Electrician serving Davis County Utah" loading="lazy">
       </div>
       <div>
-        <h2>Your Local Davis County Electricians</h2>
-        <p>Osborne Electric provides professional residential electrical services to homeowners throughout Davis County. From Bountiful to Layton and everywhere in between, we're here for your electrical needs.</p>
-        <p>Our licensed Master Electricians bring quality workmanship and honest service to every job.</p>
-        
-        <h3>Communities We Serve:</h3>
+        <h2>Your Trusted Davis County Electricians</h2>
+        <p>Davis County combines the charm of well-established neighborhoods in Bountiful and Kaysville with the steady growth of communities along the I-15 corridor. Osborne Electric understands the electrical needs specific to this area -- from aging wiring in mid-century Bountiful homes to modern circuit demands in newer Farmington Station developments.</p>
+        <p>As licensed Master Electricians, we bring the expertise, tools, and professionalism that Davis County homeowners deserve. Every project receives the same personal attention, whether it is a simple fixture swap or a full-panel replacement.</p>
+
+        <h3>Davis County Communities We Serve:</h3>
         <ul class="value-list">
-          <li>Bountiful</li>
-          <li>Layton</li>
+          <li><a href="/areas/bountiful-ut/">Bountiful</a></li>
+          <li><a href="/areas/layton-ut/">Layton</a></li>
           <li>Farmington</li>
           <li>Kaysville</li>
           <li>Centerville</li>
-          <li>Syracuse</li>
-          <li>Clearfield</li>
           <li>Woods Cross</li>
-          <li>North Salt Lake</li>
-          <li>Fruit Heights</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Davis County Homeowners Choose Us</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>Our Master Electrician license is the highest certification available in Utah. We bring that level of expertise to every Davis County home we work in.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned</h3>
+        <p>You work directly with Trevor Osborne, the owner. No middlemen, no subcontractors -- just clear communication and quality craftsmanship from a local family business.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest Pricing</h3>
+        <p>Free estimates, clear quotes, and no surprise charges. We respect your budget and your home equally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>What cities in Davis County does Osborne Electric serve?</summary>
+        <div class="faq-details-body">
+          <p>We serve all Davis County communities including Bountiful, Layton, Farmington, Kaysville, Centerville, and Woods Cross. Our licensed Master Electricians provide residential electrical services to homeowners throughout the entire county, from the southern border near North Salt Lake to the northern edge near Weber County.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>Do older homes in Davis County typically need electrical upgrades?</summary>
+        <div class="faq-details-body">
+          <p>Many homes in established Davis County neighborhoods like Bountiful and Kaysville were built with 100-amp or even 60-amp panels that cannot handle modern electrical demands. We frequently perform panel upgrades to 200-amp service, replace outdated wiring, install GFCI and AFCI protection, and add circuits for home offices, EV chargers, and modern appliances.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How much does an electrician in Davis County typically charge?</summary>
+        <div class="faq-details-body">
+          <p>Pricing varies by the scope of work, but Osborne Electric provides free, detailed estimates before any work begins. We believe in transparent pricing with no hidden fees. Call us at 801-885-4521 to discuss your project and receive a straightforward quote you can count on.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/panel-upgrades/" class="internal-link-card">
+        <h4>Panel Upgrades</h4>
+        <p>Upgrade aging panels to safely power your modern home.</p>
+      </a>
+      <a href="/services/lighting-installation/" class="internal-link-card">
+        <h4>Lighting Installation</h4>
+        <p>Recessed lighting, LED conversions, and custom fixture work.</p>
+      </a>
+      <a href="/areas/salt-lake-county/" class="internal-link-card">
+        <h4>Salt Lake County</h4>
+        <p>Serving Sandy, Draper, Murray, West Valley City, and more.</p>
+      </a>
+      <a href="/areas/tooele-county/" class="internal-link-card">
+        <h4>Tooele County</h4>
+        <p>Serving Tooele, Grantsville, Stansbury Park, and Erda.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -49,11 +196,15 @@ description: "Licensed electricians serving Davis County - Bountiful, Layton, Fa
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Davis County?</h2>
-    <p>Contact us today for fast, reliable service.</p>
+    <p>Contact us for dependable residential electrical service anywhere in the county.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}

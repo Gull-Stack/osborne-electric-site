@@ -1,81 +1,188 @@
 ---
-title: "Electrical Services | Osborne Electric & Contracting"
-description: "Professional electrical services in Utah. Residential electrical, remodels, lighting installation, panel upgrades, and power restoration. Licensed Master Electricians."
+title: "Electrical Services Utah | Osborne Electric"
+description: "Professional residential electrical services across Utah. Panel upgrades, lighting, rewiring, remodels, and emergency power restoration by licensed Master Electricians. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Electrical Services",
+  "provider": {
+    "@type": "ElectricalContractor",
+    "name": "Osborne Electric & Contracting",
+    "telephone": "+1-801-885-4521"
+  },
+  "areaServed": [
+    {"@type": "County", "name": "Salt Lake County"},
+    {"@type": "County", "name": "Utah County"},
+    {"@type": "County", "name": "Davis County"},
+    {"@type": "County", "name": "Tooele County"},
+    {"@type": "County", "name": "Summit County"}
+  ],
+  "description": "Full-service residential electrical contractor providing panel upgrades, lighting installation, power restoration, remodels, new construction wiring, and general residential electrical services throughout Utah."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Services"}
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/new.jpg')"></div>
   <div class="container">
-    <nav class="breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> <span>/</span> Services
     </nav>
     <h1>Our Electrical Services</h1>
-    <p>Professional electrical work for every home and project</p>
+    <p>Licensed Master Electricians delivering quality residential electrical work across Salt Lake, Utah, Davis, Tooele, and Summit Counties.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
-    <div class="services-grid">
-      <div class="service-card">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric & Contracting provides full-service residential electrical work throughout five Utah counties. Owner Trevor Osborne, a licensed Master Electrician, personally oversees every project. Services include panel upgrades, lighting installation, power restoration, remodel and new construction wiring, and complete residential electrical repair. Family-owned with transparent pricing and free estimates on every job.
+    </div>
+
+    <div class="section-header">
+      <span class="section-label">What We Do</span>
+      <h2>Residential Electrical Services</h2>
+      <p>From straightforward outlet repairs to full home rewiring, our team handles every project with precision, code compliance, and personal accountability.</p>
+    </div>
+
+    <div class="services-grid five-cols">
+      <a href="/services/residential-electrical/" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
         </div>
         <h3>Residential Electrical</h3>
-        <p>Complete home electrical services including repairs, outlets, switches, and troubleshooting for Utah homeowners.</p>
-        <a href="/services/residential-electrical/">Learn More →</a>
-      </div>
-      
-      <div class="service-card">
+        <p>Complete home electrical services -- outlet and switch repairs, circuit troubleshooting, rewiring, ceiling fans, smoke detectors, GFCI installation, and safety inspections.</p>
+        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a href="/services/panel-upgrades/" class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M22 12H2M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/></svg>
-        </div>
-        <h3>Remodels & New Construction</h3>
-        <p>Expert electrical wiring for home builds, renovations, and additions. We work with builders and homeowners.</p>
-        <a href="/services/remodels-new-construction/">Learn More →</a>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
-        </div>
-        <h3>Lighting Installation</h3>
-        <p>Recessed lighting, kitchen lighting, exterior fixtures, LED upgrades, and smart lighting systems.</p>
-        <a href="/services/lighting-installation/">Learn More →</a>
-      </div>
-      
-      <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM9 9h6v6H9z"/></svg>
+          <svg viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>
         </div>
         <h3>Panel Upgrades</h3>
-        <p>Outdated electrical panel replacement and capacity upgrades to meet modern power demands safely.</p>
-        <a href="/services/panel-upgrades/">Learn More →</a>
-      </div>
-      
-      <div class="service-card">
+        <p>Outdated panel replacement and capacity upgrades. 100A to 200A upgrades, fuse box conversions, sub-panel installation, and meter base replacement.</p>
+        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a href="/services/lighting-installation/" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+        </div>
+        <h3>Lighting Installation</h3>
+        <p>Recessed lighting, under-cabinet fixtures, pendant lights, outdoor landscape lighting, LED upgrades, dimmers, and smart lighting systems.</p>
+        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a href="/services/power-restoration/" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
         <h3>Power Restoration</h3>
-        <p>Emergency electrical repairs and outage troubleshooting. We'll get your power back on fast.</p>
-        <a href="/services/power-restoration/">Learn More →</a>
+        <p>Emergency electrical repairs and outage diagnosis. Breaker failures, electrical shorts, storm damage, sparking outlets, and burning smell investigation.</p>
+        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+
+      <a href="/services/remodels-new-construction/" class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M12 12h.01M8 12h.01M16 12h.01"/></svg>
+        </div>
+        <h3>Remodels & New Construction</h3>
+        <p>New home wiring, room additions, kitchen and bath remodels, basement finishing, garage electrical, code upgrades, and permit coordination.</p>
+        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Why Us</span>
+      <h2>Why Choose Osborne Electric</h2>
+      <p>Family-owned, licensed, and committed to doing the job right the first time.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <h3>Licensed Master Electricians</h3>
+        <p>Owner Trevor Osborne holds a Utah Master Electrician license, the highest electrical certification in the state. Every job meets or exceeds code.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <h3>Honest, Transparent Pricing</h3>
+        <p>We provide free estimates with clear, upfront quotes. No hidden fees, no surprise charges, no upsells. What we quote is what you pay.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <h3>Personal Accountability</h3>
+        <p>As a family-owned business, we stake our reputation on every project. Trevor personally oversees the work and ensures your satisfaction.</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Internal Links -->
+<section class="content-section">
+  <div class="container">
+    <h3>Service Areas</h3>
+    <div class="internal-links">
+      <a href="/areas/salt-lake-county/" class="internal-link-card">
+        <h4>Salt Lake County</h4>
+        <p>Salt Lake City, Sandy, Draper, Murray, West Valley City, and surrounding communities.</p>
+      </a>
+      <a href="/areas/utah-county/" class="internal-link-card">
+        <h4>Utah County</h4>
+        <p>Provo, Orem, Lehi, American Fork, and communities throughout Utah County.</p>
+      </a>
+      <a href="/areas/davis-county/" class="internal-link-card">
+        <h4>Davis County</h4>
+        <p>Bountiful, Layton, Farmington, Kaysville, and surrounding Davis County areas.</p>
+      </a>
+      <a href="/areas/tooele-county/" class="internal-link-card">
+        <h4>Tooele County</h4>
+        <p>Tooele, Grantsville, Stansbury Park, and the greater Tooele County area.</p>
+      </a>
+      <a href="/areas/summit-county/" class="internal-link-card">
+        <h4>Summit County</h4>
+        <p>Park City, Coalville, Kamas, and Summit County mountain communities.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>Need Electrical Work Done?</h2>
-    <p>Contact us today for a free estimate.</p>
+    <h2>Ready to Get Started?</h2>
+    <p>Contact us today for a free estimate on any residential electrical project across our five-county service area.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
-    <div class="btn-group">
-      <a href="/contact/" class="btn btn-primary">Get a Free Quote</a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
     </div>
   </div>
 </section>

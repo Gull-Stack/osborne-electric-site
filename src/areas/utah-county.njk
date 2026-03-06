@@ -1,47 +1,196 @@
 ---
 title: "Electrician Utah County | Osborne Electric"
-description: "Licensed electricians serving Utah County - Provo, Orem, Lehi, American Fork, Pleasant Grove & more. Residential electrical services. Call 801-885-4521."
+description: "Licensed electricians serving Utah County -- Provo, Orem, Lehi, American Fork, Pleasant Grove, and beyond. Residential electrical experts. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
+{% block schema %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ElectricalContractor",
+  "name": "Osborne Electric & Contracting",
+  "telephone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "url": "https://osborne-electric.com",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Utah County",
+    "containedInPlace": {"@type": "State", "name": "Utah"}
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "UT",
+    "addressCountry": "US"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://osborne-electric.com/"},
+    {"@type": "ListItem", "position": 2, "name": "Service Areas", "item": "https://osborne-electric.com/areas/"},
+    {"@type": "ListItem", "position": 3, "name": "Utah County"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you serve all of Utah County or just certain cities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We serve all of Utah County including Provo, Orem, Lehi, American Fork, Pleasant Grove, Lindon, Springville, and Spanish Fork. Whether you are in the north end near Point of the Mountain or further south near Payson, we are happy to schedule residential electrical work at your home."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What types of electrical work do you do in Utah County homes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We handle all residential electrical services including panel upgrades, lighting installation, outlet and switch work, whole-home rewiring, ceiling fan installation, EV charger wiring, smoke detector upgrades, and emergency electrical repairs. We specialize in both older homes that need updating and new construction wiring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I get a quote for electrical work in Utah County?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Call us at 801-885-4521 or fill out the contact form on our website. We provide free estimates for all residential electrical projects in Utah County. We will discuss your needs, schedule a convenient time to assess the work, and provide a clear, upfront quote before any work begins."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
-<section class="page-header">
+<section class="service-hero">
+  <div class="hero-bg" style="background-image: url('/images/work/project-03.jpg')"></div>
   <div class="container">
     <nav class="breadcrumb">
       <a href="/">Home</a> <span>/</span> <a href="/areas/">Service Areas</a> <span>/</span> Utah County
     </nav>
     <h1>Utah County Electrician</h1>
-    <p>Trusted residential electrical services throughout Utah County</p>
+    <p>Licensed Master Electricians serving Provo, Orem, Lehi, and all of Utah County</p>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+      <a href="tel:801-885-4521" class="btn btn-white">Call 801-885-4521</a>
+    </div>
   </div>
 </section>
 
 <section class="content-section">
   <div class="container">
+    <div class="ai-summary">
+      <strong>Summary:</strong> Osborne Electric serves Utah County homeowners with licensed residential electrical work. From the tech corridor in Lehi to university neighborhoods in Provo and Orem, owner Trevor Osborne delivers panel upgrades, lighting installation, rewiring, and emergency repairs with Master Electrician credentials, transparent pricing, and family-business accountability.
+    </div>
     <div class="content-grid">
       <div class="content-image">
-        <img src="/images/work/project-06.jpg" alt="Electrical work in Utah County" loading="lazy">
+        <img src="/images/work/project-03.jpg" alt="Electrician serving Utah County" loading="lazy">
       </div>
       <div>
-        <h2>Your Local Utah County Electricians</h2>
-        <p>Osborne Electric provides professional residential electrical services to homeowners throughout Utah County. From the tech corridor in Lehi to the university towns of Provo and Orem, we're your trusted electrical experts.</p>
-        <p>Our licensed Master Electricians handle everything from simple repairs to complete home rewiring.</p>
-        
-        <h3>Communities We Serve:</h3>
+        <h2>Your Trusted Utah County Electricians</h2>
+        <p>Utah County is one of the fastest-growing regions in the country, and with that growth comes a constant need for reliable residential electrical services. Osborne Electric brings Master Electrician expertise to homeowners from Lehi's Silicon Slopes corridor all the way south to Spanish Fork.</p>
+        <p>Whether your Orem home needs a panel upgrade to keep pace with modern appliances, or your American Fork kitchen is due for new lighting, we deliver the same high-quality workmanship and personal service on every project. As a family-owned business, we understand that your home is your most important investment.</p>
+
+        <h3>Utah County Communities We Serve:</h3>
         <ul class="value-list">
-          <li>Provo</li>
-          <li>Orem</li>
-          <li>Lehi</li>
-          <li>American Fork</li>
+          <li><a href="/areas/provo-ut/">Provo</a></li>
+          <li><a href="/areas/orem-ut/">Orem</a></li>
+          <li><a href="/areas/lehi-ut/">Lehi</a></li>
+          <li><a href="/areas/american-fork-ut/">American Fork</a></li>
           <li>Pleasant Grove</li>
-          <li>Saratoga Springs</li>
-          <li>Eagle Mountain</li>
-          <li>Spanish Fork</li>
+          <li>Lindon</li>
           <li>Springville</li>
-          <li>Payson</li>
+          <li>Spanish Fork</li>
         </ul>
-        
+
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Utah County Homeowners Choose Us</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3>Licensed Master Electricians</h3>
+        <p>Our Master Electrician license represents the highest level of certification in Utah. Every wire, every connection, every circuit meets or exceeds current electrical code requirements.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline fill="none" stroke="currentColor" stroke-width="2" points="9 22 9 12 15 12 15 22"/></svg>
+        <h3>Family-Owned</h3>
+        <p>Trevor Osborne personally manages every project. You work directly with the owner, not a dispatcher or sales representative. That direct relationship means better communication and better results.</p>
+      </div>
+      <div class="service-card">
+        <svg viewBox="0 0 24 24" width="32" height="32" style="margin-bottom: 0.75rem;"><path fill="none" stroke="currentColor" stroke-width="2" d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        <h3>Honest Pricing</h3>
+        <p>We give you a clear quote before we start. No surprises on the invoice, no inflated hourly rates, and no unnecessary upsells. Straightforward pricing on every project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-details">
+        <summary>Do you serve all of Utah County or just certain cities?</summary>
+        <div class="faq-details-body">
+          <p>We serve all of Utah County including Provo, Orem, Lehi, American Fork, Pleasant Grove, Lindon, Springville, and Spanish Fork. Whether you are in the north end near Point of the Mountain or further south near Payson, we are happy to schedule residential electrical work at your home.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>What types of electrical work do you do in Utah County homes?</summary>
+        <div class="faq-details-body">
+          <p>We handle all residential electrical services including panel upgrades, lighting installation, outlet and switch work, whole-home rewiring, ceiling fan installation, EV charger wiring, smoke detector upgrades, and emergency electrical repairs. We specialize in both older homes that need updating and new construction wiring.</p>
+        </div>
+      </details>
+      <details class="faq-details">
+        <summary>How do I get a quote for electrical work in Utah County?</summary>
+        <div class="faq-details-body">
+          <p>Call us at 801-885-4521 or fill out the contact form on our website. We provide free estimates for all residential electrical projects in Utah County. We will discuss your needs, schedule a convenient time to assess the work, and provide a clear, upfront quote before any work begins.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt-bg">
+  <div class="container">
+    <h3>Related Services & Nearby Areas</h3>
+    <div class="internal-links">
+      <a href="/services/residential-electrical/" class="internal-link-card">
+        <h4>Residential Electrical</h4>
+        <p>Complete home electrical services from repairs to full rewiring.</p>
+      </a>
+      <a href="/services/remodels-new-construction/" class="internal-link-card">
+        <h4>Remodels & New Construction</h4>
+        <p>Electrical wiring for home additions, renovations, and new builds.</p>
+      </a>
+      <a href="/areas/salt-lake-county/" class="internal-link-card">
+        <h4>Salt Lake County</h4>
+        <p>Serving Sandy, Draper, Murray, West Valley City, and more.</p>
+      </a>
+      <a href="/areas/summit-county/" class="internal-link-card">
+        <h4>Summit County</h4>
+        <p>Serving Park City, Coalville, Kamas, and the Heber area.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -49,11 +198,15 @@ description: "Licensed electricians serving Utah County - Provo, Orem, Lehi, Ame
 <section class="cta-section">
   <div class="container">
     <h2>Need an Electrician in Utah County?</h2>
-    <p>Contact us today for fast, reliable service.</p>
+    <p>Contact us for professional, reliable residential electrical service throughout the county.</p>
     <a href="tel:801-885-4521" class="cta-phone">
       <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       801-885-4521
     </a>
+    <div class="btn-group btn-group--center">
+      <a href="/contact/" class="btn btn-primary">Request a Quote</a>
+      <a href="mailto:Osborne-electric@outlook.com" class="btn btn-secondary">Email Us</a>
+    </div>
   </div>
 </section>
 {% endblock %}
