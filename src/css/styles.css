@@ -1257,6 +1257,199 @@ section {
   }
 }
 
+/* AI Summary Box */
+.ai-summary {
+  background: var(--light-gray);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2rem;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--dark-gray);
+}
+
+.ai-summary strong {
+  color: var(--primary);
+}
+
+/* Comparison Table */
+.comparison-table-wrap {
+  overflow-x: auto;
+  margin: 1.5rem 0 2rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 600px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.comparison-table thead th {
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.comparison-table thead th.highlight-col {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.comparison-table tbody td.highlight-col {
+  background: rgba(244, 178, 35, 0.08);
+  font-weight: 500;
+}
+
+.comparison-table tbody tr:hover {
+  background: var(--light-gray);
+}
+
+.comparison-table tbody tr:hover td.highlight-col {
+  background: rgba(244, 178, 35, 0.15);
+}
+
+/* FAQ Accordion (native details/summary) */
+.faq-accordion {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-details {
+  background: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.faq-details summary {
+  padding: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+.faq-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-details summary::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 1rem;
+}
+
+.faq-details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.faq-details summary:hover {
+  background: var(--light-gray);
+}
+
+.faq-details-body {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--medium-gray);
+}
+
+.faq-details-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Brand Facts */
+.brand-facts-section {
+  margin-bottom: 2.5rem;
+}
+
+.brand-facts-section h2 {
+  border-bottom: 2px solid var(--light-gray);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.facts-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.facts-table th,
+.facts-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+  vertical-align: top;
+}
+
+.facts-table th {
+  width: 180px;
+  font-weight: 600;
+  color: var(--primary);
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .facts-table th {
+    width: 120px;
+  }
+}
+
+/* Process List */
+.process-list {
+  list-style: none;
+  counter-reset: process-step;
+  margin: 1.5rem 0;
+}
+
+.process-list li {
+  counter-increment: process-step;
+  padding: 0.875rem 0 0.875rem 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.process-list li:last-child {
+  border-bottom: none;
+}
+
+.process-list li::before {
+  content: counter(process-step);
+  position: absolute;
+  left: 0;
+  top: 0.75rem;
+  width: 28px;
+  height: 28px;
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
 /* GullStack Credit */
 .gullstack-credit {
   display: inline-flex;

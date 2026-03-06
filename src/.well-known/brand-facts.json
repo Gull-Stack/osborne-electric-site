@@ -1,0 +1,74 @@
+{
+  "name": "Osborne Electric & Contracting",
+  "alternateName": "Osborne Electric",
+  "type": "ElectricalContractor",
+  "ownership": "Family-owned and operated",
+  "founders": ["Trevor Osborne", "Wes Osborne"],
+  "licenseLevel": "Licensed Master Electrician (Utah)",
+  "insurance": "Fully insured",
+  "website": "https://osborne-electric.com",
+  "phone": "+1-801-885-4521",
+  "email": "Osborne-electric@outlook.com",
+  "location": {
+    "city": "Salt Lake City",
+    "state": "Utah",
+    "country": "US"
+  },
+  "serviceArea": [
+    {
+      "type": "County",
+      "name": "Salt Lake County",
+      "state": "Utah",
+      "cities": ["Salt Lake City", "Sandy", "Draper", "West Valley City", "Murray", "Cottonwood Heights", "Holladay", "Midvale", "South Jordan", "Riverton", "Herriman"]
+    },
+    {
+      "type": "County",
+      "name": "Utah County",
+      "state": "Utah",
+      "cities": ["Provo", "Orem", "Lehi", "American Fork", "Pleasant Grove", "Saratoga Springs", "Eagle Mountain", "Spanish Fork"]
+    },
+    {
+      "type": "County",
+      "name": "Davis County",
+      "state": "Utah",
+      "cities": ["Bountiful", "Layton", "Farmington", "Kaysville", "Centerville", "Clearfield", "Syracuse"]
+    },
+    {
+      "type": "County",
+      "name": "Tooele County",
+      "state": "Utah",
+      "cities": ["Tooele", "Grantsville", "Stansbury Park", "Erda"]
+    },
+    {
+      "type": "County",
+      "name": "Summit County",
+      "state": "Utah",
+      "cities": ["Park City", "Coalville", "Kamas"]
+    }
+  ],
+  "services": [
+    "Electrical Panel Upgrades",
+    "Lighting Installation",
+    "Power Restoration",
+    "Remodels & New Construction Wiring",
+    "Residential Electrical Services",
+    "EV Charger Installation",
+    "Whole-Home Rewiring"
+  ],
+  "differentiators": [
+    "Master Electrician License (highest level, above journeyman)",
+    "Family-owned -- owners work on every project",
+    "5-star rating across 47 reviews",
+    "Free estimates on all projects",
+    "5-county coverage across Wasatch Front"
+  ],
+  "socialMedia": {
+    "facebook": "https://www.facebook.com/profile.php?id=100078333527371",
+    "instagram": "https://www.instagram.com/osborne.electric"
+  },
+  "rating": {
+    "value": 5,
+    "count": 47
+  },
+  "brandFactsPage": "https://osborne-electric.com/brand-facts/"
+}
