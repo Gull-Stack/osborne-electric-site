@@ -290,6 +290,44 @@ section {
   display: none;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-phone {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color var(--transition);
+  white-space: nowrap;
+}
+
+.header-phone:hover {
+  color: var(--gold-hover);
+}
+
+.header-phone svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.header-phone-number {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-phone-number {
+    display: inline;
+  }
+}
+
 @media (min-width: 1024px) {
   .nav-toggle {
     display: none;
