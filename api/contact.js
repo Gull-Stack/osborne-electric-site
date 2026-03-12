@@ -29,7 +29,7 @@ function looksLikeSpam(data) {
 }
 // === END SPAM PROTECTION ===
 
-async function sendEmail({ to, from, subject, html, replyTo }) {
+async function sendEmail({ to, from, subject, html, replyTo, cc }) {
   const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
     method: 'POST',
     headers: {
@@ -37,7 +37,7 @@ async function sendEmail({ to, from, subject, html, replyTo }) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify({
-      personalizations: [{ to: [{ email: to }] }],
+      personalizations: [{ to: [{ email: to }], ...(cc ? { cc: [{ email: cc }] } : {}) }],
       from: { email: from },
       reply_to: replyTo ? { email: replyTo } : undefined,
       subject,
@@ -123,7 +123,7 @@ export default async function handler(req, res) {
         </div>
       `;
 
-      await sendEmail({ to: siteEmail, from: fromEmail, subject: `🔔 New Lead: ${name} - ${service || 'General inquiry'}`, html: notificationHtml, replyTo: email || undefined });
+      await sendEmail({ to: siteEmail, from: fromEmail, subject: `🔔 New Lead: ${name} - ${service || 'General inquiry'}`, html: notificationHtml, replyTo: email || undefined, cc: 'bryce@gullstack.com' });
     }
 
     if (SUPERTOOL_TENANT_ID) {
