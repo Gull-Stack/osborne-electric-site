@@ -1,6 +1,6 @@
 ---
-title: "Commercial & Residential Electricians Utah | Osborne Electric"
-description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Family-owned commercial & residential electrical services - tenant improvements, panel upgrades, lighting, repairs. Call 801-885-4521."
+title: "Licensed Master Electrician Utah | Osborne Electric & Contracting"
+description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Family-owned residential electrical services - panel upgrades, lighting, repairs. Call 801-885-4521."
 ---
 {% extends "base.njk" %}
 
@@ -15,7 +15,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
   "url": "https://osborne-electric.com",
   "logo": "https://osborne-electric.com/images/logo.png",
   "image": "https://osborne-electric.com/images/work/new.jpg",
-  "description": "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Family-owned commercial & residential electrical contractor providing tenant improvements, industrial power systems, panel upgrades, lighting installation, power restoration, remodels, and full electrical services.",
+  "description": "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooele & Summit Counties. Family-owned residential electrical contractor providing panel upgrades, lighting installation, power restoration, remodels, and full residential electrical services.",
   "telephone": "+1-801-885-4521",
   "email": "Osborne-electric@outlook.com",
   "address": {
@@ -35,9 +35,6 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     "@type": "OfferCatalog",
     "name": "Electrical Services",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Commercial Electrical"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Industrial & Warehouse"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Data & Low Voltage"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Panel Upgrades"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lighting Installation"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Power Restoration"}},
@@ -104,7 +101,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
       "name": "What electrical services does Osborne Electric provide?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Osborne Electric provides both commercial and residential electrical services. Commercial services include tenant improvements, industrial & warehouse electrical, data & low voltage systems. Residential services include panel upgrades, lighting installation, power restoration and emergency repairs, remodels and new construction wiring, and full home electrical services including outlet repairs, switch installation, rewiring, and home safety inspections."
+        "text": "Osborne Electric provides panel upgrades, lighting installation, power restoration and emergency repairs, remodels and new construction wiring, and full residential electrical services including outlet repairs, switch installation, rewiring, and home safety inspections."
       }
     },
     {
@@ -112,7 +109,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
       "name": "Does Osborne Electric offer free estimates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Osborne Electric provides free estimates for all commercial and residential electrical projects across their 5-county service area. Call 801-885-4521 or submit a request through the website contact form."
+        "text": "Yes. Osborne Electric provides free estimates for all residential electrical projects across their 5-county service area. Call 801-885-4521 or submit a request through the website contact form."
       }
     },
     {
@@ -129,22 +126,6 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Osborne Electric is family-owned by Trevor Osborne, a licensed Master Electrician who personally oversees every project. Unlike large companies that send subcontractors, Osborne Electric's own team handles every job with A+ workmanship, honest pricing, and personal accountability."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does Osborne Electric do commercial work?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes! Osborne Electric handles a full range of commercial electrical projects including office buildouts, retail renovations, restaurant wiring, tenant improvements, and commercial lighting upgrades. Their Master Electrician license and bonding enable them to work on commercial properties throughout Utah."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of commercial projects do you handle?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Osborne Electric handles commercial tenant improvements, office buildouts, retail spaces, restaurant electrical systems, industrial facilities, warehouse power distribution, structured cabling and data centers, security system wiring, and commercial lighting retrofits. From small office spaces to large industrial facilities, they scale to your project needs."
       }
     }
   ]
@@ -163,8 +144,8 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
         <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
         Licensed Master Electricians
       </div>
-      <h1>Utah's Commercial & Residential Electrical Experts</h1>
-      <p>Family-owned electrical contractors serving Salt Lake City, Provo, Park City, and surrounding areas. Specializing in commercial tenant improvements, industrial power systems, data centers, and full residential services. Quality workmanship, honest pricing, and personal service on every job.</p>
+      <h1>Utah's Trusted Master Electricians</h1>
+      <p>Family-owned electrical contractors serving Salt Lake City, Provo, Park City, and surrounding areas. Quality workmanship, honest pricing, and personal service on every job.</p>
       <div class="btn-group">
         <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
         <a href="tel:801-885-4521" class="btn btn-white">
@@ -210,39 +191,10 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     <div class="section-header">
       <span class="section-label">What We Do</span>
       <h2>Our Electrical Services</h2>
-      <p>From commercial tenant improvements to residential rewiring, we handle every electrical project with precision and care.</p>
+      <p>From simple repairs to complete rewiring, we handle every electrical job with precision and care.</p>
     </div>
 
-    <div class="services-grid responsive-grid">
-      <!-- Commercial Services First -->
-      <a href="/services/commercial-electrical/" class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3>Commercial Electrical</h3>
-        <p>Tenant improvements, office buildouts, retail spaces, restaurant wiring, and commercial renovations.</p>
-        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/industrial-warehouse/" class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><rect x="6" y="6" width="4" height="4"/><rect x="14" y="6" width="4" height="4"/><rect x="6" y="14" width="4" height="4"/><rect x="14" y="14" width="4" height="4"/></svg>
-        </div>
-        <h3>Industrial & Warehouse</h3>
-        <p>Heavy power systems, 3-phase installations, manufacturing facilities, and warehouse electrical infrastructure.</p>
-        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <a href="/services/data-low-voltage/" class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 6v6m11-7h-6m-6 0H1"/><path d="M20.2 20.2 18 18m0-12 2.2-2.2m0 16.4L18 18M6 6 3.8 3.8"/></svg>
-        </div>
-        <h3>Data & Low Voltage</h3>
-        <p>Structured cabling, data centers, network infrastructure, security systems, and telecommunications wiring.</p>
-        <span class="service-card-link">Learn More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-      </a>
-
-      <!-- Existing Residential Services -->
+    <div class="services-grid five-cols">
       <a href="/services/residential-electrical/" class="service-card">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
@@ -297,7 +249,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     <div class="section-header">
       <span class="section-label">Our Work</span>
       <h2>Recent Projects</h2>
-      <p>A selection of commercial and residential electrical projects completed across Utah.</p>
+      <p>A selection of residential electrical projects completed across Utah.</p>
     </div>
 
     <div class="gallery-grid">
@@ -393,13 +345,6 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
             <td><span class="check-no">Rotating crews</span></td>
           </tr>
           <tr>
-            <td>Commercial & Industrial Experience</td>
-            <td class="highlight-col"><span class="check-yes">Yes</span></td>
-            <td><span class="check-maybe">Limited</span></td>
-            <td><span class="check-no">Residential only</span></td>
-            <td><span class="check-maybe">Varies</span></td>
-          </tr>
-          <tr>
             <td>Free Estimates</td>
             <td class="highlight-col"><span class="check-yes">Yes</span></td>
             <td><span class="check-no">Service fee</span></td>
@@ -412,8 +357,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
   </div>
 </section>
 
-<!-- Team Section — 6 members with photos (HIDDEN) -->
-<!--
+<!-- Team Section — 6 members with photos -->
 <section class="content-section">
   <div class="container">
     <div class="section-header">
@@ -485,7 +429,6 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     </div>
   </div>
 </section>
--->
 
 <!-- How It Works — 3 Steps -->
 <section class="content-section alt-bg">
@@ -597,35 +540,14 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
       <details class="faq-details">
         <summary>What electrical services do you provide?</summary>
         <div class="faq-details-body">
-          <p>We specialize in both commercial and residential electrical services. Commercial services include <a href="/services/commercial-electrical/">tenant improvements</a>, <a href="/services/industrial-warehouse/">industrial & warehouse electrical</a>, and <a href="/services/data-low-voltage/">data & low voltage systems</a>. Residential services include <a href="/services/panel-upgrades/">panel upgrades</a>, <a href="/services/lighting-installation/">lighting installation</a>, <a href="/services/power-restoration/">power restoration and emergency repairs</a>, <a href="/services/remodels-new-construction/">remodels and new construction wiring</a>, and full <a href="/services/residential-electrical/">home electrical services</a> including outlet repairs, switch installation, rewiring, and home safety inspections.</p>
-        </div>
-      </details>
-
-      <details class="faq-details">
-        <summary>Does Osborne Electric do commercial work?</summary>
-        <div class="faq-details-body">
-          <p>Yes! We handle a full range of <a href="/services/commercial-electrical/">commercial electrical projects</a> including office buildouts, retail renovations, restaurant wiring, tenant improvements, and commercial lighting upgrades. Our Master Electrician license and bonding enable us to work on commercial properties throughout Utah.</p>
-        </div>
-      </details>
-
-      <details class="faq-details">
-        <summary>What types of commercial projects do you handle?</summary>
-        <div class="faq-details-body">
-          <p>We handle commercial tenant improvements, office buildouts, retail spaces, restaurant electrical systems, <a href="/services/industrial-warehouse/">industrial facilities</a>, warehouse power distribution, <a href="/services/data-low-voltage/">structured cabling and data centers</a>, security system wiring, and commercial lighting retrofits. From small office spaces to large industrial facilities, we scale to your project needs.</p>
-        </div>
-      </details>
-
-      <details class="faq-details">
-        <summary>Do you work with commercial contractors and property managers?</summary>
-        <div class="faq-details-body">
-          <p>Absolutely. We regularly partner with general contractors, property management companies, and commercial developers. We understand project timelines, permit requirements, and code compliance for commercial work. Our team can coordinate with other trades and deliver projects on time and within budget.</p>
+          <p>We provide <a href="/services/panel-upgrades/">panel upgrades</a>, <a href="/services/lighting-installation/">lighting installation</a>, <a href="/services/power-restoration/">power restoration and emergency repairs</a>, <a href="/services/remodels-new-construction/">remodels and new construction wiring</a>, and full <a href="/services/residential-electrical/">residential electrical services</a> including outlet repairs, switch installation, rewiring, and home safety inspections.</p>
         </div>
       </details>
 
       <details class="faq-details">
         <summary>Do you offer free estimates?</summary>
         <div class="faq-details-body">
-          <p>Yes. We provide free estimates for both commercial and residential electrical projects across our 5-county service area. Call <a href="tel:801-885-4521">801-885-4521</a> or submit a request through our <a href="/contact/">contact form</a>.</p>
+          <p>Yes. We provide free estimates for all residential electrical projects across our 5-county service area. Call <a href="tel:801-885-4521">801-885-4521</a> or submit a request through our <a href="/contact/">contact form</a>.</p>
         </div>
       </details>
 
@@ -653,7 +575,7 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     <div class="contact-content-grid">
       <div class="contact-text">
         <h2>Ready to Get Started?</h2>
-        <p>Contact us today for a free estimate on your commercial or residential electrical project. We serve businesses and homeowners across Salt Lake, Utah, Davis, Tooele, and Summit Counties.</p>
+        <p>Contact us today for a free estimate on your electrical project. We serve homeowners across Salt Lake, Utah, Davis, Tooele, and Summit Counties.</p>
         <a href="tel:801-885-4521" class="contact-phone-big">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           801-885-4521
@@ -695,9 +617,6 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
             <label for="service">Service Needed</label>
             <select id="service" name="service">
               <option value="">Select a service...</option>
-              <option value="commercial">Commercial Electrical</option>
-              <option value="industrial">Industrial & Warehouse</option>
-              <option value="data-low-voltage">Data & Low Voltage</option>
               <option value="residential">Residential Electrical</option>
               <option value="remodel">Remodel / New Construction</option>
               <option value="lighting">Lighting Installation</option>
