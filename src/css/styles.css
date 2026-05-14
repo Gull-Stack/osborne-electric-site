@@ -2237,3 +2237,59 @@ a.city-tag:hover {
     padding: 1rem 0;
   }
 }
+
+/* ==========================================================================
+   STICKY MOBILE CALL BAR
+   ========================================================================== */
+.mobile-call-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-call-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1a1a1a;
+    color: #F4B223;
+    padding: 0.95rem 1rem calc(0.95rem + env(safe-area-inset-bottom, 0px));
+    font-family: 'Inter', sans-serif;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.18);
+    border-top: 2px solid #F4B223;
+  }
+
+  .mobile-call-bar svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .mobile-call-bar:hover,
+  .mobile-call-bar:focus {
+    background: #F4B223;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  /* Add bottom padding to body so content isn't covered */
+  body {
+    padding-bottom: 64px;
+  }
+
+  /* Hide the mobile call bar in print */
+  @media print {
+    .mobile-call-bar {
+      display: none;
+    }
+  }
+}
