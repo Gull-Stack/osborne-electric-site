@@ -20,16 +20,58 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
   "email": "Osborne-electric@outlook.com",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Salt Lake City",
+    "addressLocality": "Bluffdale",
     "addressRegion": "UT",
+    "postalCode": "84065",
     "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.4839,
+    "longitude": -111.9388
   },
   "areaServed": [
     {"@type": "County", "name": "Salt Lake County"},
     {"@type": "County", "name": "Utah County"},
     {"@type": "County", "name": "Davis County"},
     {"@type": "County", "name": "Tooele County"},
-    {"@type": "County", "name": "Summit County"}
+    {"@type": "County", "name": "Summit County"},
+    {"@type": "City", "name": "Bluffdale"},
+    {"@type": "City", "name": "Riverton"},
+    {"@type": "City", "name": "Sandy"},
+    {"@type": "City", "name": "Draper"},
+    {"@type": "City", "name": "Lehi"},
+    {"@type": "City", "name": "Park City"},
+    {"@type": "City", "name": "Tooele"},
+    {"@type": "City", "name": "Grantsville"},
+    {"@type": "City", "name": "Stansbury Park"},
+    {"@type": "City", "name": "Coalville"},
+    {"@type": "City", "name": "Kamas"},
+    {"@type": "City", "name": "Farmington"},
+    {"@type": "City", "name": "Bountiful"},
+    {"@type": "City", "name": "Layton"}
+  ],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "credentialCategory": "Utah Master Electrician License",
+    "identifier": "12644476-5501",
+    "recognizedBy": {
+      "@type": "Organization",
+      "name": "Utah Department of Professional Licensing"
+    }
+  },
+  "identifier": "Utah DOPL License #12644476-5501",
+  "knowsAbout": [
+    "Electrical panel upgrades",
+    "EV charger installation",
+    "Generator installation",
+    "Emergency electrical service",
+    "Hot tub and spa wiring",
+    "Whole-home rewires",
+    "Commercial electrical",
+    "Residential electrical",
+    "Lighting installation",
+    "Power restoration"
   ],
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -42,7 +84,11 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Lighting Installation"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Power Restoration"}},
       {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Remodels & New Construction"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Electrical"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Residential Electrical"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "EV Charger Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Generator Installation"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Emergency Electrician"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Hot Tub & Spa Wiring"}}
     ]
   },
   "founder": {
@@ -161,15 +207,15 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
     <div class="hero-content">
       <div class="hero-label">
         <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
-        Licensed Master Electricians
+        5.0 Stars · 47+ Google Reviews · Same-Day Service Available
       </div>
       <h1>Utah's Commercial & Residential Electrical Experts</h1>
-      <p>Family-owned electrical contractors serving Salt Lake City, Provo, Park City, and surrounding areas. Specializing in commercial tenant improvements, industrial power systems, data centers, and full residential services. Quality workmanship, honest pricing, and personal service on every job.</p>
+      <p>Family-owned electrical contractors serving Salt Lake, Utah, Davis, Tooele, and Summit Counties. Master Electrician license #12644476-5501. Specializing in panel upgrades, EV chargers, generators, commercial tenant improvements, and full residential services. Same-day service available. Free written estimates on every project.</p>
       <div class="btn-group">
-        <a href="/contact/" class="btn btn-primary">Get a Free Estimate</a>
+        <a href="/contact/" class="btn btn-primary">Get My Free Estimate</a>
         <a href="tel:801-885-4521" class="btn btn-white">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;margin-right:6px;vertical-align:middle"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          (801) 885-4521
+          Call (801) 885-4521
         </a>
       </div>
     </div>
@@ -707,15 +753,15 @@ description: "Licensed Master Electricians serving Salt Lake, Utah, Davis, Tooel
             </select>
           </div>
           <div class="form-group">
-            <label for="message">Tell Us About Your Project *</label>
-            <textarea id="message" name="message" required placeholder="Describe what you need help with..."></textarea>
+            <label for="message">Anything we should know? (optional)</label>
+            <textarea id="message" name="message" placeholder="Tell us briefly what you need — or just submit and we'll call you."></textarea>
           </div>
           <!-- Honeypot -->
           <div style="position: absolute; left: -9999px;" aria-hidden="true">
             <input type="text" name="fax_number" tabindex="-1" autocomplete="off">
           </div>
           <input type="hidden" name="_timestamp" id="_timestamp" value="">
-          <button type="submit" class="btn btn-primary" style="width:100%">Send Message</button>
+          <button type="submit" class="btn btn-primary" style="width:100%">Get My Free Estimate</button>
         </form>
         <script>document.getElementById('_timestamp').value = Date.now();</script>
       </div>
