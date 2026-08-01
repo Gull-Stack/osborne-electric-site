@@ -37,13 +37,14 @@ Rules that follow from that, and that a future session should not undo:
 - **Name is "Osborne Electric & Contracting"** in prose, "Osborne Electric and
   Contracting, LLC" as the legal entity. The header once read "ELECTRIC **+**
   CONTRACTING"; the plus is the naming variant that triggered the original flag.
-- **Phone is (801) 885-4521** everywhere. His BBB listing carries 885-4195 —
-  unconfirmed, and on his Flight Deck's asks list.
-- ⚠️ **Bluffdale vs Riverton is unresolved.** The profile, BBB and Yelp say
-  Riverton; this site said Bluffdale, and ~10 area pages still say "from our
-  Bluffdale home base" as a proximity claim. Deer Orchard Cove sits in ZIP 84065
-  which both cities share, so it may be a genuine boundary question. **Do not
-  guess it** — Trevor has been asked.
+- **Phone is (801) 885-4521** everywhere. Confirmed by Trevor 2026-08-01; the
+  BBB's 885-4195 is simply wrong and needs correcting at the BBB.
+- ✅ **Bluffdale is confirmed and is the only locality this site publishes.** Trevor
+  confirmed 2026-08-01 that the LLC is registered at 14087 Deer Orchard Cove,
+  **Bluffdale**, UT 84065. **USPS assigns "Riverton" as the mailing city for ZIP
+  84065**, which is why the Google profile, Yelp, the BBB and Procore all said
+  Riverton — a real boundary artefact, not an error. The ~10 area pages saying
+  "from our Bluffdale home base" were right. Keep them.
 
 Full write-up: `~/Documents/clients/osborne-electric/16-gmb-reinstatement.md`.
 Dashboard steps: `06-gbp-suspension-recovery.md`.
@@ -79,5 +80,14 @@ visit. The service and area pages work — they're just stranded between 16th an
   pending Trevor's answer, and the prose review claims on `/brand-facts/` and the
   SLC guide.
 
-**Next:** get the Bluffdale/Riverton answer and make every page agree · build the
-generator cluster pages · add a Park City page.
+### 2026-08-01 (later) — Bluffdale confirmed; the Google violation itself is fixed
+
+- Trevor confirmed the registered address and phone. Bluffdale restored to the footer
+  and to `addressLocality` on the homepage, brand-facts and the SLC guide — the latter
+  two had been claiming Salt Lake City. One locality published site-wide now.
+- On the profile itself: the address is off it entirely ("No location; deliveries and
+  home services only") and the description no longer claims a 5-star rating. What's
+  left there is the documents and the appeal.
+
+**Next:** build the generator cluster pages · add a Park City page · both go *behind*
+the reinstatement, since generator searches return a map pack he isn't in yet.
