@@ -11,10 +11,13 @@ takeoffs, GBP work). Trevor's Flight Deck is tenant `osborne` in
 
 ## 🔴 His Google Business Profile is suspended — the site must corroborate it
 
-Verified 2026-08-01: the profile (Osborne Electric and Contracting, LLC —
-14087 S Deer Orch Cv, Riverton UT 84065) reads **Suspended**, originally for
-*deceptive content*. Until it's reinstated, every edit here has a second test:
-**does this contradict what we are about to appeal with?**
+Verified 2026-08-01: the profile (Osborne Electric and Contracting, LLC) reads
+**Suspended**, originally for *deceptive content*. The violation — a public home
+address on a service-area listing — was fixed the same day, and the profile now
+carries **no address at all**. The appeal is still to file. Until it's reinstated,
+every edit here has a second test: **does this contradict what we are about to
+appeal with?** The evidence we appeal with is the LLC registration, which says
+**Bluffdale**.
 
 Rules that follow from that, and that a future session should not undo:
 
@@ -25,12 +28,12 @@ Rules that follow from that, and that a future session should not undo:
   from `src/index.njk`, `src/brand-facts/index.njk` and the SLC guide on
   2026-08-01. `src/.well-known/brand-facts.json` still states "47 reviews" in
   prose; that's a customer claim rather than a Google one, left deliberately.
-- **He is a service-area business, so publish no locality and no geo.**
-  `PostalAddress` carries `addressRegion` + `addressCountry` only; `areaServed`
-  does the real work. Three different cities were previously asserted under one
-  `@id` (Bluffdale on the homepage, Salt Lake City on brand-facts and the guide,
-  Riverton on the profile) — that contradiction is exactly what Google's
-  validation looks for.
+- **He is a service-area business: publish the city, never a street, never geo.**
+  `PostalAddress` carries `addressLocality: "Bluffdale"` + region + country and
+  nothing more; `areaServed` does the rest. Three different cities were previously
+  asserted under one `@id` (Bluffdale on the homepage, Salt Lake City on
+  brand-facts and the guide, Riverton on the profile) — that contradiction is
+  exactly what Google's validation looks for. **One locality, everywhere.**
 - **Never name his street.** `/areas/bluffdale-ut/` used to call out "the Deer
   Orchard Cove area" as the head office. That is his home, and a publicly
   identified residence *is* the SAB violation.
@@ -68,6 +71,15 @@ visit. The service and area pages work — they're just stranded between 16th an
 
 ## Session Log
 
+### 2026-08-01 (later) — Bluffdale confirmed; the Google violation itself is fixed
+
+- Trevor confirmed the registered address and phone. Bluffdale restored to the footer
+  and to `addressLocality` on the homepage, brand-facts and the SLC guide — the latter
+  two had been claiming Salt Lake City. One locality published site-wide now.
+- On the profile itself: the address is off it entirely ("No location; deliveries and
+  home services only") and the description no longer claims a 5-star rating. What's
+  left there is the documents and the appeal.
+
 ### 2026-08-01 — NAP and schema cleaned up so the site stops contradicting the profile
 
 - Header `+` → `&`; self-serving `aggregateRating` (5.0 / 47) stripped from three
@@ -79,15 +91,6 @@ visit. The service and area pages work — they're just stranded between 16th an
 - Left alone on purpose: the ~10 area pages saying "from our Bluffdale home base",
   pending Trevor's answer, and the prose review claims on `/brand-facts/` and the
   SLC guide.
-
-### 2026-08-01 (later) — Bluffdale confirmed; the Google violation itself is fixed
-
-- Trevor confirmed the registered address and phone. Bluffdale restored to the footer
-  and to `addressLocality` on the homepage, brand-facts and the SLC guide — the latter
-  two had been claiming Salt Lake City. One locality published site-wide now.
-- On the profile itself: the address is off it entirely ("No location; deliveries and
-  home services only") and the description no longer claims a 5-star rating. What's
-  left there is the documents and the appeal.
 
 **Next:** build the generator cluster pages · add a Park City page · both go *behind*
 the reinstatement, since generator searches return a map pack he isn't in yet.
