@@ -40,6 +40,14 @@ Rules that follow from that, and that a future session should not undo:
 - **Name is "Osborne Electric & Contracting"** in prose, "Osborne Electric and
   Contracting, LLC" as the legal entity. The header once read "ELECTRIC **+**
   CONTRACTING"; the plus is the naming variant that triggered the original flag.
+- 🔴 **Trevor is NOT a Master Electrician — Weston is.** DOPL register: Trevor
+  Steven Osborne holds **9015139-B100, B100 General Building Qualifier**; Weston
+  Deloy Osborne is the **E200 General Electrical** qualifier. And **12644476-5501
+  is the company's CONTRACTOR licence**, not anyone's master electrician licence —
+  Utah keeps individual credentials and entity licences separate. Never write that
+  Trevor holds a Master Electrician licence, and never label 12644476-5501 as one.
+  Team-level phrasing ("Master Electrician on every job", "qualified by a licensed
+  Master Electrician") is accurate and is what the site now uses.
 - **Phone is (801) 885-4521** everywhere. Confirmed by Trevor 2026-08-01; the
   BBB's 885-4195 is simply wrong and needs correcting at the BBB.
 - ✅ **Bluffdale is confirmed and is the only locality this site publishes.** Trevor
