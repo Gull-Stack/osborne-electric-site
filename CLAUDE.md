@@ -40,9 +40,15 @@ Rules that follow from that, and that a future session should not undo:
 - **Name is "Osborne Electric & Contracting"** in prose, "Osborne Electric and
   Contracting, LLC" as the legal entity. The header once read "ELECTRIC **+**
   CONTRACTING"; the plus is the naming variant that triggered the original flag.
-- 🔴 **Trevor is NOT a Master Electrician — Weston is.** DOPL register: Trevor
-  Steven Osborne holds **9015139-B100, B100 General Building Qualifier**; Weston
-  Deloy Osborne is the **E200 General Electrical** qualifier. And **12644476-5501
+- 🔴 **Trevor is a JOURNEYMAN electrician, not a Master — Weston is the Master.**
+  DOPL register: Trevor Steven Osborne holds **9015139-5504 (Journeyman
+  Electrician, ACTIVE)** and **9015139-B100 (B100 General Building Qualifier)**.
+  Journeyman is the level directly *below* Master. Weston Deloy Osborne is the
+  **E200 General Electrical** qualifier and so the master electrician of record.
+  The site used to call Trevor a Master Electrician, "the highest electrical
+  certification in Utah", while its own FAQ explained that a journeyman works
+  *under* a master's licence — it contradicted itself on the same page.
+  And **12644476-5501
   is the company's CONTRACTOR licence**, not anyone's master electrician licence —
   Utah keeps individual credentials and entity licences separate. Never write that
   Trevor holds a Master Electrician licence, and never label 12644476-5501 as one.
