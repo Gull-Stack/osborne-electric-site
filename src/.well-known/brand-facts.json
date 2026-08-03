@@ -3,7 +3,10 @@
   "alternateName": "Osborne Electric",
   "type": "ElectricalContractor",
   "ownership": "Family-owned and operated",
-  "founders": ["Trevor Osborne", "Wes Osborne"],
+  "founders": [
+    "Trevor Osborne - licensed General Building Contractor, Utah B100 #9015139-B100",
+    "Wes Osborne - licensed Master Electrician, Utah #8528070-5502"
+  ],
   "licenseLevel": "Utah DOPL Contractor License #12644476-5501",
   "insurance": "Fully insured",
   "website": "https://osborne-electric.com",
