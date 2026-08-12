@@ -16,8 +16,27 @@ function isGibberish(text) {
   return false;
 }
 
+// The checks above stop crude bots. They did not stop what actually filled this
+// form: 22 of the first 34 submissions were human-written sales pitches with
+// plausible names — SEO agencies, proxy resellers, one casino. Reviewed 11 Aug.
+//
+// So these look at the MESSAGE rather than the sender. A homeowner writes about
+// their own house; a pitch writes about Trevor's. That difference is the signal,
+// and it is far more reliable than trying to spot a fake name.
+const SOLICITATION = [
+  /\byour (?:website|site|business|company|listing|brand|google)\b/i,
+  /\b(?:seo|search engine optimi|keyword|backlink|rank(?:ing)? (?:on|in) google|google business profile)\b/i,
+  /\b(?:digital marketing|lead gen|web design services|our (?:agency|team) (?:can|helps))\b/i,
+  /\b(?:proxy service|casino|crypto|forex|guest post|link building)\b/i,
+  /\b(?:i (?:just )?(?:visited|came across|found) your)\b/i,
+  /\bunsubscribe\b/i,
+];
+
+// Same shop, five submissions, five different names. Cheap and exact.
+const BAD_SENDER = /@(jmailservice\.com|outsideagent\.ai)$/i;
+
 function looksLikeSpam(data) {
-  const { name, fax_number, _timestamp } = data;
+  const { name, email, message, fax_number, _timestamp } = data;
   if (fax_number) return 'honeypot';
   if (_timestamp) {
     const elapsed = Date.now() - parseInt(_timestamp, 10);
@@ -25,9 +44,65 @@ function looksLikeSpam(data) {
   }
   if (isGibberish(name)) return 'gibberish_name';
   if (name && name.trim().length < 2) return 'short_name';
+  if (email && BAD_SENDER.test(email)) return 'known_sender';
+
+  const body = String(message || '');
+  // Two or more links in an enquiry to an electrician is a pitch, not a job.
+  if ((body.match(/https?:\/\//gi) || []).length >= 2) return 'links';
+  // One phrase could be a coincidence; two is a sales email.
+  const hits = SOLICITATION.filter((re) => re.test(body)).length;
+  if (hits >= 2) return 'solicitation';
   return false;
 }
 // === END SPAM PROTECTION ===
+
+/** Record every submission on Trevor's Flight Deck, spam included.
+ *
+ *  Spam is stored with status 'spam' rather than dropped: the deck filters it out
+ *  of his view but still counts it, which is the only way anyone can see that the
+ *  form is taking two junk messages for every real one. Silently discarding it
+ *  would hide the problem we are trying to fix.
+ *
+ *  Uses the REST endpoint directly rather than the supabase client so this file
+ *  stays free of imports — it is ESM and api/hit.js is CommonJS, and mixing the
+ *  two module systems in one directory is a trap not worth walking into.
+ *
+ *  Never throws. A lead must reach Trevor's inbox even if this store is down. */
+async function recordSubmission(fields, status) {
+  const url = process.env.PORTAL_SUPABASE_URL;
+  const key = process.env.PORTAL_SUPABASE_SERVICE_KEY;
+  if (!url || !key) return;
+
+  const { name, email, phone, city, service, message } = fields;
+  try {
+    await fetch(`${url}/rest/v1/portal_submissions`, {
+      method: 'POST',
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({
+        tenant: 'osborne',
+        form: 'contact',
+        name: name || null,
+        email: email || null,
+        phone: phone || null,
+        subject: service || 'General inquiry',
+        payload: {
+          city: city || 'Not specified',
+          service: service || 'General inquiry',
+          message: message || '',
+        },
+        source_url: 'https://www.osborne-electric.com/contact/',
+        status,
+      }),
+    });
+  } catch (err) {
+    console.error('deck record failed:', err && err.message);
+  }
+}
 
 async function sendEmail({ to, from, subject, html, replyTo, cc }) {
   const response = await fetch('https://api.sendgrid.com/v3/mail/send', {
@@ -59,9 +134,11 @@ export default async function handler(req, res) {
     const { name, email, phone, city, service, message, fax_number, _timestamp } = req.body;
 
     // === SPAM CHECK ===
-    const spamReason = looksLikeSpam({ name, fax_number, _timestamp });
+    const spamReason = looksLikeSpam({ name, email, message, fax_number, _timestamp });
     if (spamReason) {
       console.log(`[SPAM BLOCKED] reason=${spamReason} name="${name}" email="${email}"`);
+      // Counted on the deck, never shown to him, and no email sent.
+      await recordSubmission({ name, email, phone, city, service, message }, 'spam');
       const acceptsHtml = req.headers.accept?.includes('text/html');
       if (acceptsHtml) {
         return res.status(200).send(`<!DOCTYPE html><html><head><title>Message Sent</title><meta http-equiv="refresh" content="3;url=/"/><style>body{font-family:system-ui,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;background:#1a1a1a;color:white;}.container{text-align:center;padding:2rem;}h1{color:#F4B223;}</style></head><body><div class="container"><h1>✓ Message Sent!</h1><p>Thank you! We'll be in touch soon.</p></div></body></html>`);
@@ -77,6 +154,10 @@ export default async function handler(req, res) {
     const siteName = process.env.SITE_NAME || 'Osborne Electric';
     const siteEmail = process.env.SITE_EMAIL || 'Osborne-electric@outlook.com';
     const fromEmail = process.env.FROM_EMAIL || 'leads@gullstack.com';
+
+    // Onto the deck first, before the emails. The store is the permanent record;
+    // email is the alert. If SendGrid has a bad minute the enquiry still survives.
+    await recordSubmission({ name, email, phone, city, service, message }, 'new');
 
     if (email && SENDGRID_API_KEY) {
       const confirmationHtml = `
