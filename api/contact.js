@@ -46,9 +46,19 @@ function looksLikeSpam(data) {
   if (name && name.trim().length < 2) return 'short_name';
   if (email && BAD_SENDER.test(email)) return 'known_sender';
 
+  // A bot tagging its own gmail with our domain — huella.digital544+osborne-
+  // electric398@gmail.com. No human does this. Caught the night this shipped,
+  // when one such message slipped through as a real lead.
+  if (email && /\+[^@]*osborne/i.test(email)) return 'tagged_sender';
+
   const body = String(message || '');
   // Two or more links in an enquiry to an electrician is a pitch, not a job.
   if ((body.match(/https?:\/\//gi) || []).length >= 2) return 'links';
+  // A bulleted digest of headlines is a content-spam blast, not somebody with a
+  // panel problem. Three or more dashed lines and a link is conclusive.
+  if ((body.match(/^\s*[-•]\s+\S/gm) || []).length >= 3 && /https?:\/\//i.test(body)) {
+    return 'digest';
+  }
   // One phrase could be a coincidence; two is a sales email.
   const hits = SOLICITATION.filter((re) => re.test(body)).length;
   if (hits >= 2) return 'solicitation';
