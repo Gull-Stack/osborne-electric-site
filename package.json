@@ -2,9 +2,10 @@
   "name": "osborne-electric-site",
   "version": "1.0.0",
   "scripts": {
-    "build": "eleventy",
+    "build": "eleventy && node scripts/audit-licence-claims.js",
     "start": "eleventy --serve",
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "audit": "node scripts/audit-licence-claims.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1"
