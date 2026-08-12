@@ -41,6 +41,31 @@
     gtag('config', 'G-C39CXG1F4V');
   </script>
 
+  <!-- First-party pageview beacon -> Trevor's Flight Deck (flight.osborne-electric.com).
+       No cookie, no PII, honours Do Not Track, and never blocks the page. GA4
+       above stays the deep-analysis tool; this is what the owner's deck reads. -->
+  <script>
+    (function () {
+      if (navigator.doNotTrack === "1" || window.doNotTrack === "1") return;
+      var send = function () {
+        try {
+          fetch("/api/hit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            keepalive: true,
+            body: JSON.stringify({
+              p: location.pathname,
+              r: document.referrer || null,
+              m: window.matchMedia("(max-width: 767px)").matches
+            })
+          }).catch(function () {});
+        } catch (e) {}
+      };
+      if (document.readyState === "complete") send();
+      else window.addEventListener("load", send, { once: true });
+    })();
+  </script>
+
   <!-- Fonts: Inter + Syne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
