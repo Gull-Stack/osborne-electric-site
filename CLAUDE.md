@@ -54,8 +54,14 @@ Rules that follow from that, and that a future session should not undo:
   Trevor holds a Master Electrician licence, and never label 12644476-5501 as one.
   Team-level phrasing ("Master Electrician on every job", "qualified by a licensed
   Master Electrician") is accurate and is what the site now uses.
-- **Phone is (801) 885-4521** everywhere. Confirmed by Trevor 2026-08-01; the
-  BBB's 885-4195 is simply wrong and needs correcting at the BBB.
+- **Phone is (801) 885-4521** everywhere on the site — that is Trevor's, and it is
+  the main business line. Confirmed by Trevor 2026-08-01.
+  ⚠️ **Corrected 2026-08-17: 885-4195 is WES's number, not an error.** Both handles
+  are in the "Osborne Again" iMessage group, and Trevor addressed Wes there from
+  4521 while 4195 answered. Earlier notes called 4195 "simply wrong"; acting on that
+  would have meant telling the BBB a real number does not exist. The BBB still needs
+  correcting for its **wrong address** and for listing a number that is not the main
+  business line.
 - ✅ **Bluffdale is confirmed and is the only locality this site publishes.** Trevor
   confirmed 2026-08-01 that the LLC is registered at 14087 Deer Orchard Cove,
   **Bluffdale**, UT 84065. **USPS assigns "Riverton" as the mailing city for ZIP
