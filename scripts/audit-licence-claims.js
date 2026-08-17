@@ -94,6 +94,21 @@ const RULES = [
     exemptIf: /\bWes(ton)?\b|8528070/i,
   },
   {
+    // DECIDED 2026-08-17 (Bryce): the site says "Master Electrician", singular.
+    // The firm fields one — Wes, #8528070-5502. Trevor is a journeyman. 101
+    // instances were made singular before the second appeal was filed, on the
+    // reasoning that singular ranks the same and cannot be argued with by a
+    // reviewer who has already upheld a deceptive-content finding.
+    //
+    // The exemption is not a loophole: generic education about the trade is not
+    // a claim about this company, and the SLC comparison guide legitimately
+    // explains what master electricians in general can do and charge. Those
+    // sentences are lowercase-m mid-sentence; a claim about Osborne is not.
+    name: 'plural "Master Electricians" — the firm fields one',
+    re: /Master Electricians/g,
+    exemptIf: /Master electricians can pull permits|Master electricians may charge|Licensed master electricians, family-owned vs big box/,
+  },
+  {
     // Self-authored reviews. The city pages get this right — they leave
     // [CITY]_TESTIMONIAL_PLACEHOLDER for a real one. The homepage shipped three
     // fully-written fakes with names, cities and five stars each, under the
@@ -119,7 +134,6 @@ if (!fs.existsSync(ROOT)) {
 }
 
 let pages = 0;
-let pluralClaims = 0;
 for (const file of htmlFiles(ROOT)) {
   pages++;
   const raw = fs.readFileSync(file, 'utf8');
@@ -146,12 +160,6 @@ for (const file of htmlFiles(ROOT)) {
     }
   }
 
-  // Counted and reported, NOT failed — a judgment call, not a clear falsehood.
-  // The firm fields ONE master electrician (Wes), so the plural overstates it,
-  // but "licensed master electricians" is also ordinary trade phrasing for a
-  // firm whose electrical work is master-qualified. Bryce decides; the number
-  // stays on screen so the decision doesn't get made by forgetting.
-  pluralClaims += (text.match(/Master Electricians/gi) || []).length;
 
   const re = /Master Electrician/gi;
   let m;
@@ -201,11 +209,3 @@ if (failures.length) {
 }
 
 console.log(`claims audit: ${pages} pages checked, ${RULES.length + 1} rules, 0 failures.`);
-if (pluralClaims) {
-  // Not a failure. See the note at the plural counter above — this is Bryce's
-  // call, and printing it every build is how it stays a decision rather than
-  // an oversight.
-  console.log(`claims audit: ⚠️  ${pluralClaims} instances of the PLURAL "Master Electricians".`);
-  console.log('             The firm fields one (Wes, #8528070-5502). Decide whether the');
-  console.log('             plural stays; it is an overstatement, not a checkable falsehood.');
-}
