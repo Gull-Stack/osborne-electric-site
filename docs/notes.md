@@ -21,3 +21,38 @@ Never put passwords, API keys, or tokens in this file.
 ## Links
 
 - (dashboards, live URLs, Notion pages, ticket queues)
+
+## 2026-08-17 — claims discipline: what the audit must catch, and why
+
+Three classes of unverifiable claim were live for months while
+`scripts/audit-licence-claims.js` reported "0 false claims". Keep all five rules;
+do not narrow them.
+
+1. **Never publish a review, testimonial, star rating or review count.** Not one we
+   wrote, not one paraphrased, not `aggregateRating` markup. The city pages hold the
+   correct pattern: `[CITY]_TESTIMONIAL_PLACEHOLDER`, filled only from something a real
+   customer actually said. On 17 Aug the homepage was serving three invented five-star
+   testimonials with names and cities. Trevor has been asked for real ones since the
+   spring and has not sent them; the answer to that is an empty slot, never a written
+   one.
+2. **12644476-5501 is the COMPANY'S CONTRACTOR licence.** Utah keeps entity licences and
+   individual credentials separate. Its **E200 General Electrical** classification is
+   qualified by **Weston (Wes) Osborne, Master Electrician #8528070-5502**; its **B100
+   General Building** by **Trevor**, who is a **journeyman** (#9015139-5504). Never label
+   12644476-5501 a Master Electrician licence. Never say the company "holds" one — a
+   person holds one. Accurate form: "Utah DOPL contractor license #12644476-5501, with
+   all electrical work qualified by Master Electrician Wes Osborne (#8528070-5502)".
+3. **Team-level phrasing is fine** ("Master Electrician on every job"). Naming Trevor
+   personally is not.
+
+**The plural is unresolved.** "Licensed Master Electricians" appears 123 times and the
+firm fields one master electrician. Reported by the audit on every build, deliberately
+not failed — it is a positioning call for Bryce, not a bug. If nobody has decided, it is
+still open.
+
+**Why this is stricter here than on other sites:** the Business Profile is suspended for
+DECEPTIVE CONTENT, moderated 19 Mar 2026, and the appeal was reviewed and **Not
+approved** on 15 May. A human reviewer upheld a finding that something on this business
+was not truthful. Every claim has to survive being checked against a public record —
+the DOPL register at https://secure.utah.gov/llv/search/ is the authority, and it is
+CAPTCHA-gated, so a person runs the lookup.

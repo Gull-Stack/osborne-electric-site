@@ -85,6 +85,62 @@ visit. The service and area pages work — they're just stranded between 16th an
 
 ## Session Log
 
+### 2026-08-17 — the homepage was still publishing three invented five-star reviews
+
+- 🔴 **The find: `src/index.njk` was serving three testimonials nobody sourced from a
+  customer** — "Mike R." (Salt Lake City), "Sarah T." (Draper), "James & Linda P."
+  (Provo), five gold stars each, under the heading **"Reviews / What Our Customers Say
+  / Real feedback from Utah homeowners."** Live on a profile suspended for *deceptive
+  content* whose appeal was already denied.
+- **Our own docs prove they were placeholders.** `clients/osborne-electric/04-city-landing-pages.md`
+  leaves `[CITY]_TESTIMONIAL_PLACEHOLDER` on every city page with "Trevor to fill with
+  real review", and `01-trevor-action-packet.md` lists customer testimonials as an open
+  ask to Trevor. **That ask was never answered** — the homepage shipped the placeholder
+  fully written instead, in the 5 March rebuild, two weeks before the suspension. They
+  outlived the entire 1–2 Aug cleanup that removed `aggregateRating` and "47+ Google
+  Reviews" for exactly this reason, and they were live underneath both community posts.
+  Removed, with the now-dead `.testimonial-*` CSS.
+- 🔴 **And the licence mislabel we told a Product Expert was fixed on 2 Aug was still in
+  the homepage meta description**: "Master Electrician license #12644476-5501". That
+  number is the **company's CONTRACTOR licence**. Also corrected: **26** area-page
+  sentences claiming "Osborne Electric holds a Master Electrician license", **five**
+  `/areas` cards heading a "Master Electrician" block with the contractor number (the
+  pairing this file already warned about, fixed only for Bluffdale on 11 Aug), and
+  **eight** "Our/Their Master Electrician license…" claims across the commercial,
+  industrial and county pages.
+- 🔴 **ROOT CAUSE: `scripts/audit-licence-claims.js` printed "52 pages checked, 0 false
+  claims" through all of it.** It asked exactly one question — does a sentence name
+  Trevor near "Master Electrician"? — so anything phrased differently walked past, and
+  the clean total is what everyone quoted. **An audit that checks one sentence shape and
+  reports a clean total is worse than no audit.** It now runs **five rules over the RAW
+  HTML** (class names and JSON-LD keys are invisible to `renderedText`): licence-number
+  mislabel, company-level master claims, self-authored testimonials, and
+  aggregateRating/review-count markup. Comments are stripped first so it stops flagging
+  its own paper trail, and correct attribution ("…qualified by Master Electrician Wes
+  Osborne #8528070-5502") is explicitly exempt so the rule doesn't train people to
+  ignore it.
+- **The audit was proven, not assumed.** Reintroduced one real historical violation per
+  rule into the built output: all five fire, exit code 1, `npm run build` blocks; exit 0
+  when clean. Two of the fixes above were found BY the new rules after the first pass —
+  and the first version of two rules produced false positives on my own corrections,
+  which is why `exemptIf` exists.
+- **Deleted `src/index.njk.backup`** — a stale May copy carrying the original "Trevor
+  Osborne holds a Master Electrician license, the highest electrical certification in
+  Utah." Unbuilt and 404 on prod, but a loaded gun for a future session. In git history.
+- Verified live on all 51 pages after deploy: **0 testimonial/review markup, 0
+  aggregateRating, 0 licence mislabels**, 143 JSON-LD blocks still parse, homepage flows
+  cleanly from the comparison table into the 3-step process (screenshotted, not just
+  measured).
+- ⚠️ **NOT changed, and it is Bryce's call: 123 instances of the PLURAL "Master
+  Electricians".** The firm fields one. An overstatement, not a checkable falsehood, and
+  123 grammar edits carry their own risk. **The audit prints the count on every build**
+  so it stays a decision rather than an oversight. My recommendation is to go singular.
+
+**Next:** the second appeal is **filable** — see
+`~/Documents/clients/osborne-electric/24-second-appeal-runbook.md`. A Product Expert
+handed us the route on 8 Aug and it sat unactioned for nine days.
+
+
 ### 2026-08-01 (later) — Bluffdale confirmed; the Google violation itself is fixed
 
 - Trevor confirmed the registered address and phone. Bluffdale restored to the footer
