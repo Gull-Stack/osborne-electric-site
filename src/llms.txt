@@ -1,0 +1,47 @@
+# Osborne Electric & Contracting
+
+> Family-owned, licensed electrical contractor based in Bluffdale, Utah, serving Salt Lake, Utah, Davis, Tooele and Summit Counties. Residential, commercial and industrial electrical work with a Master Electrician on every job. Phone (801) 885-4521.
+
+## Company
+- Legal entity: Osborne Electric and Contracting, LLC
+- Based in: Bluffdale, Utah (service-area business; no walk-in address)
+- Phone: (801) 885-4521
+- Email: Osborne-electric@outlook.com
+- Company contractor licence: Utah DOPL #12644476-5501
+- Wes Osborne: Master Electrician, Utah #8528070-5502 (master electrician of record)
+- Trevor Osborne: General Building Contractor, Utah B100 #9015139-B100
+- Fully insured; free estimates
+
+## Services
+- Residential electrical services
+- Electrical panel upgrades
+- Lighting installation
+- Power restoration
+- Remodels and new-construction wiring
+- EV charger installation
+- Whole-home rewiring
+- Generator installation
+- Emergency electrician
+- Hot tub and spa wiring
+- Commercial electrical
+- Industrial and warehouse electrical
+- Data and low-voltage wiring
+
+## Service area
+- Salt Lake County, Utah
+- Utah County, Utah
+- Davis County, Utah
+- Tooele County, Utah
+- Summit County, Utah
+
+## Key pages
+- [Home](https://osborne-electric.com/)
+- [Services](https://osborne-electric.com/services/)
+- [Service areas](https://osborne-electric.com/areas/)
+- [About](https://osborne-electric.com/about/)
+- [Company facts](https://osborne-electric.com/brand-facts/)
+- [Contact](https://osborne-electric.com/contact/)
+- Guides: https://osborne-electric.com/guides/
+
+## Full text
+- [llms-full.txt](https://osborne-electric.com/llms-full.txt): the text of every guide, service and area page.

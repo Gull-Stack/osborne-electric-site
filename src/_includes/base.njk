@@ -30,6 +30,11 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://osborne-electric.com{{ page.url }}">
 
+  <!-- WebSite schema, site-wide. The organisation block lives on each page's schema block. -->
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "WebSite", "url": "https://osborne-electric.com/", "name": "Osborne Electric & Contracting", "publisher": {"@id": "https://osborne-electric.com/#organization"}}
+  </script>
+
   <title>{{ title | default('Osborne Electric & Contracting | Master Electrician Utah') }}</title>
 
   <!-- Google Analytics 4 -->
