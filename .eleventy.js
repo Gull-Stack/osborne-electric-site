@@ -10,6 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/apple-touch-icon.png");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/.well-known");
+  eleventyConfig.addPassthroughCopy("src/brand-facts.json");
+  eleventyConfig.addPassthroughCopy("src/llms.txt");
 
   // Date filter for sitemap
   eleventyConfig.addFilter("date", function(dateObj, format) {
