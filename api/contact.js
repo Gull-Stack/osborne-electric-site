@@ -132,6 +132,11 @@ async function sendEmail({ to, from, subject, html, replyTo, cc }) {
   return response.ok;
 }
 
+// Shared across every client lead endpoint. Canonical copy lives in
+// Gull-Stack/walkthru-labs → shared/lead-spam-filter.js; this is a synced copy,
+// so fix it there and re-run shared/sync-lead-spam-filter.sh, not here.
+import { classifyLead } from './lead-spam-filter.js';
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -162,14 +167,31 @@ export default async function handler(req, res) {
     }
 
     const siteName = process.env.SITE_NAME || 'Osborne Electric';
-    const siteEmail = process.env.SITE_EMAIL || 'Osborne-electric@outlook.com';
     const fromEmail = process.env.FROM_EMAIL || 'leads@gullstack.com';
+
+    // Customer, or someone selling to Trevor? Five of the September "leads" were
+    // outbound sales, four of them using 202-555-01xx numbers from the block
+    // reserved for fiction. A flagged submission is never dropped — it is stored
+    // as spam (the deck keeps it and hides it) and the alert comes to us instead.
+    const triage = classifyLead({
+      name, email, phone, message,
+      extraText: [service, city].filter(Boolean).join(' '),
+    });
+    const isClean = triage.verdict === 'clean';
+    const siteEmail = isClean
+      ? (process.env.SITE_EMAIL || 'Osborne-electric@outlook.com')
+      : 'bryce@gullstack.com';
+    if (!isClean) {
+      console.log(`[LEAD TRIAGE] verdict=${triage.verdict} reasons=${triage.reasons.join('|')} name="${name}" — routed to Bryce, NOT the client`);
+    }
 
     // Onto the deck first, before the emails. The store is the permanent record;
     // email is the alert. If SendGrid has a bad minute the enquiry still survives.
-    await recordSubmission({ name, email, phone, city, service, message }, 'new');
+    await recordSubmission({ name, email, phone, city, service, message }, isClean ? 'new' : 'spam');
 
-    if (email && SENDGRID_API_KEY) {
+    // Auto-reply skipped on a flagged submission: thanking a cold pitch
+    // confirms the mailbox is live and gets the address resold.
+    if (email && SENDGRID_API_KEY && isClean) {
       const confirmationHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <div style="background: #1a1a1a; padding: 30px; text-align: center;">
@@ -214,7 +236,23 @@ export default async function handler(req, res) {
         </div>
       `;
 
-      await sendEmail({ to: siteEmail, from: fromEmail, subject: `🔔 New Lead: ${name} - ${service || 'General inquiry'}`, html: notificationHtml, replyTo: email || undefined, cc: 'bryce@gullstack.com' });
+      const tag = isClean ? '🔔 New Lead'
+        : triage.verdict === 'test' ? '[OUR TEST — not a lead]'
+        : '[NOT A LEAD — selling to Trevor]';
+      await sendEmail({
+        to: siteEmail,
+        from: fromEmail,
+        subject: `${tag}: ${name} - ${service || 'General inquiry'}`,
+        html: isClean ? notificationHtml
+          : `<p style="font:14px Arial;background:#fff8e6;border-left:3px solid #F4B223;padding:12px 14px;margin:0 0 18px">
+               <b>Held back from Trevor.</b> Classified <b>${triage.verdict}</b> —
+               ${triage.reasons.join(', ')}. Stored on the deck as spam, not as an enquiry.<br>
+               If this is a real customer the filter is wrong: fix
+               <code>shared/lead-spam-filter.js</code> in walkthru-labs and re-sync.
+             </p>${notificationHtml}`,
+        replyTo: email || undefined,
+        cc: isClean ? 'bryce@gullstack.com' : undefined,
+      });
     }
 
     if (SUPERTOOL_TENANT_ID) {
