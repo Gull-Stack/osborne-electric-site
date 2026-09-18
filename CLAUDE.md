@@ -91,6 +91,18 @@ visit. The service and area pages work — they're just stranded between 16th an
 
 ## Session Log
 
+### 2026-09-18 — "5-Star Rated" trust badge removed; the claims audit now catches it
+
+- The homepage trust strip still said **"5-Star Rated"** (src/index.njk) with a star icon. It is the
+  same unsourced rating claim the 1 Aug cleanup removed from the schema, in plain text. Found while
+  screenshotting the site for the new Walkthru Labs case study (walkthrulabs.com/work/osborne-electric/).
+- Removed the badge. The strip now reads Licensed Master Electrician (team-level, accurate),
+  Family-Owned, Fully Insured.
+- `scripts/audit-licence-claims.js`: the rating rule now also matches `5-star rated` / `five star
+  rating` as text. Positive control: appending "5-Star Rated" to _site/index.html fails the audit;
+  the real build passes, 52 pages, 0 failures.
+- Next: nothing. If Trevor wants a rating shown, it must be his live Google rating, linked, not typed.
+
 ### 2026-08-17 — the homepage was still publishing three invented five-star reviews
 
 - 🔴 **The find: `src/index.njk` was serving three testimonials nobody sourced from a

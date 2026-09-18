@@ -120,9 +120,10 @@ const RULES = [
     // A business marking up its own rating breaks Google's structured-data
     // policy outright, and advertising a review count Google cannot see while
     // the profile is suspended is the worst possible pairing. Removed 1 Aug;
-    // this stops it coming back.
+    // this stops it coming back. A bare "5-Star Rated" trust badge is the same
+    // claim in plain text (it survived on the homepage until 18 Sep).
     name: 'self-serving rating or review-count markup',
-    re: /aggregateRating|ratingValue|reviewCount|\d+\+?\s*Google Reviews/gi,
+    re: /aggregateRating|ratingValue|reviewCount|\d+\+?\s*Google Reviews|\b(?:5|five)[- ]star (?:rated|rating)/gi,
   },
 ];
 
