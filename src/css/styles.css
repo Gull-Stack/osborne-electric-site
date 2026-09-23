@@ -11,14 +11,18 @@
   --gold: #F4B223;
   --gold-hover: #E5A31D;
   --gold-light: rgba(244, 178, 35, 0.08);
+  /* a11y: gold TEXT on light backgrounds. #F4B223 is 1.9:1 on white, so text uses a
+     darker amber; dark sections switch it back to the bright gold (see below). */
+  --gold-text: #8f6200;
+  --gold-text-hover: #6f4c00;
   --white: #ffffff;
   --off-white: #fafafa;
   --light-gray: #f5f6fa;
   --border-gray: #e8e9ed;
   --medium-gray: #636e72;
   --dark-gray: #2d3436;
-  --success: #27ae60;
-  --danger: #e74c3c;
+  --success: #1e7e45; /* a11y: was #27ae60 (2.7:1) */
+  --danger: #c0392b; /* a11y: was #e74c3c (3.8:1) */
 
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -105,7 +109,7 @@ a {
 }
 
 a:hover {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 /* ---------- Layout ---------- */
@@ -262,7 +266,7 @@ section {
 
 .main-nav > ul > li > a:hover,
 .main-nav > ul > li > a.active {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .nav-dropdown-content {
@@ -283,7 +287,7 @@ section {
 }
 
 .nav-dropdown-content a:hover {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .header-cta {
@@ -300,7 +304,7 @@ section {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--gold);
+  color: var(--gold-text);
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
@@ -309,7 +313,7 @@ section {
 }
 
 .header-phone:hover {
-  color: var(--gold-hover);
+  color: var(--gold-text-hover);
 }
 
 .header-phone svg {
@@ -708,7 +712,7 @@ section {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin-bottom: 0.75rem;
 }
 
@@ -800,7 +804,7 @@ section {
 }
 
 .service-card:hover .service-card-link {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 /* Service card as link */
@@ -988,7 +992,7 @@ a.service-card:hover {
 }
 
 .team-role {
-  color: var(--gold);
+  color: var(--gold-text);
   font-weight: 600;
   font-size: 0.8125rem;
   letter-spacing: 0.02em;
@@ -1249,13 +1253,13 @@ a.service-card:hover {
   gap: 0.75rem;
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--gold);
+  color: var(--gold-text);
   margin: 1.5rem 0;
   letter-spacing: -0.02em;
 }
 
 .contact-phone-big:hover {
-  color: var(--gold-hover);
+  color: var(--gold-text-hover);
 }
 
 .contact-phone-big svg {
@@ -1633,7 +1637,7 @@ a.service-card:hover {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--gold);
+  color: var(--gold-text);
   line-height: 1.2;
 }
 
@@ -1753,7 +1757,7 @@ a.city-tag:hover {
 }
 
 .contact-item a:hover {
-  color: var(--gold);
+  color: var(--gold-text);
 }
 
 .contact-form {
@@ -1899,7 +1903,7 @@ a.city-tag:hover {
 
 .footer-bottom p {
   font-size: 0.8125rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.55); /* a11y: was 0.4 (3.8:1) */
   margin-bottom: 0;
 }
 
@@ -1920,13 +1924,13 @@ a.city-tag:hover {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.55); /* a11y: was 0.4 (3.8:1) */
   font-size: 0.8125rem;
   transition: all 0.2s ease;
 }
 
 .gullstack-credit:hover {
-  color: #8b5cf6;
+  color: #a78bfa; /* a11y: was #8b5cf6 (4.1:1 on #1a1a1a) */
 }
 
 .gullstack-logo {
@@ -2135,7 +2139,7 @@ a.city-tag:hover {
    UTILITY CLASSES
    ========================================================================== */
 .text-center { text-align: center; }
-.text-gold { color: var(--gold); }
+.text-gold { color: var(--gold-text); }
 .mb-0 { margin-bottom: 0; }
 .mb-1 { margin-bottom: 1rem; }
 .mb-2 { margin-bottom: 2rem; }
@@ -2239,4 +2243,16 @@ a.city-tag:hover {
       display: none;
     }
   }
+}
+
+/* a11y: dark sections keep the bright brand gold for text */
+.hero, .service-hero, .area-hero, .contact-section-bg, .cta-section, .footer, .comparison-table thead {
+  --gold-text: var(--gold);
+  --gold-text-hover: var(--gold-hover);
+}
+
+/* a11y: links inside running text need more than color to stand out */
+main :is(p, li) > a:not([class]) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
