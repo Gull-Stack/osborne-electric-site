@@ -91,6 +91,19 @@ visit. The service and area pages work — they're just stranded between 16th an
 
 ## Session Log
 
+## 2026-09-23 — Solicitations no longer email anyone
+
+- `api/contact.js`: a submission the shared filter classifies `solicitation`
+  now sends **no email at all** — not to the client, not to Bryce. It is still
+  logged (Blob / deck / delivery record), so the record is never lost. `test`
+  verdicts still mail Bryce so the pipe is provably alive.
+- Why: six "[NOT A LEAD — selling to …]" mails hit Bryce's inbox in five days
+  (same "I would like more information. Please contact me by email" template,
+  mismatched name/email). Bryce: "don't let me even see it."
+- Same change landed in monterey-bay-door, edge-energy-site, d-one-builders,
+  osborne-electric-site. The classifier itself is unchanged
+  (walkthru-labs → shared/lead-spam-filter.js).
+
 ### 2026-09-18 — "5-Star Rated" trust badge removed; the claims audit now catches it
 
 - The homepage trust strip still said **"5-Star Rated"** (src/index.njk) with a star icon. It is the
